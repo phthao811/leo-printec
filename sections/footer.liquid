@@ -66,7 +66,7 @@
           -%}
           <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet {{ footer_grid_class }}">
             {%- for block in section.blocks -%}
-              <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+              <div class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %} grid__item{% if block.type == 'text' %} footer-block--content{% endif %}" {{ block.shopify_attributes }}>
                 {%- if block.settings.heading != blank -%}
                   <h2 class="footer-block__heading">{{- block.settings.heading | escape -}}</h2>
                 {%- endif -%}
@@ -202,7 +202,7 @@
     {%- endunless -%}
   {%- endif -%}
 
-  <div class="footer__content-bottom">
+  {% comment %} <div class="footer__content-bottom">
     <div class="footer__content-bottom-wrapper page-width">
       <div class="footer__column footer__localization isolate">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
@@ -324,7 +324,7 @@
         {%- endif -%}
       </div>
     </div>
-  </div>
+  </div> {% endcomment %}
 </footer>
 
 {% javascript %}
