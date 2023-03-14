@@ -32,6 +32,7 @@
               <p
                 class="rich-text__caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }}"
                 {{ block.shopify_attributes }}
+                style="color:{{ block.settings.text-color }}"
               >
                 {{ block.settings.caption | escape }}
               </p>
@@ -234,6 +235,11 @@
           "default": "Add a tagline",
           "label": "t:sections.rich-text.blocks.caption.settings.text.label"
         },
+        {
+          "type": "color",
+          "id": "text-color",
+          "label": "Text Color"
+        }, 
         {
           "type": "select",
           "id": "text_style",
