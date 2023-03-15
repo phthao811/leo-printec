@@ -1,1 +1,157 @@
-{"sections":{"banner":{"type":"main-collection-banner","settings":{"show_collection_description":true,"show_collection_image":false,"color_scheme":"background-1"}},"product-grid":{"type":"main-collection-product-grid","settings":{"products_per_page":16,"columns_desktop":4,"image_ratio":"adapt","show_secondary_image":false,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"enable_filtering":true,"filter_type":"horizontal","enable_sorting":true,"columns_mobile":"2","padding_top":36,"padding_bottom":36}}},"order":["banner","product-grid"]}
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "settings": {
+        "content_box_size": "medium",
+        "content_box_position": "center",
+        "content_text_align": "center",
+        "show_collection_image": true,
+        "show_description": false,
+        "default_image": "shopify:\/\/shop_images\/revslider_h6-bg1.jpg",
+        "default_background_color": "#121212",
+        "heading_color": "#ffffff",
+        "heading_text_size": 1,
+        "text_color": "#ffffff",
+        "breadcrumb_position": "1",
+        "show_shop_bar": false,
+        "shop_bar_label": "",
+        "menu_shop": ""
+      }
+    },
+    "aecd3c9f-163c-467b-ad50-5e692bbf5df0": {
+      "type": "collection-list-grid",
+      "blocks": {
+        "template--17631060951356__aecd3c9f-163c-467b-ad50-5e692bbf5df0-1675651956e30ee789-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "case-computer-case",
+            "highlight": false,
+            "heading_color": "#ffffff",
+            "heading": "",
+            "heading_size_range": 2,
+            "heading_2": "",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#282828",
+            "overlay": "#000000",
+            "overlay_opacity": 5,
+            "link": ""
+          }
+        },
+        "template--17631060951356__aecd3c9f-163c-467b-ad50-5e692bbf5df0-1675651956e30ee789-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "custom-cooling",
+            "highlight": false,
+            "heading_color": "#ffffff",
+            "heading": "",
+            "heading_size_range": 2,
+            "heading_2": "",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#282828",
+            "overlay": "#000000",
+            "overlay_opacity": 5,
+            "link": ""
+          }
+        },
+        "template--17631060951356__aecd3c9f-163c-467b-ad50-5e692bbf5df0-1675651956e30ee789-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "headsets",
+            "highlight": false,
+            "heading_color": "#ffffff",
+            "heading": "",
+            "heading_size_range": 2,
+            "heading_2": "",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#282828",
+            "overlay": "#000000",
+            "overlay_opacity": 5,
+            "link": ""
+          }
+        },
+        "5e211d90-c395-47f1-be6e-f7352f59b54a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "mice",
+            "highlight": false,
+            "heading_color": "#ffffff",
+            "heading": "",
+            "heading_size_range": 2,
+            "heading_2": "",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#282828",
+            "overlay": "#000000",
+            "overlay_opacity": 5,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17631060951356__aecd3c9f-163c-467b-ad50-5e692bbf5df0-1675651956e30ee789-0",
+        "template--17631060951356__aecd3c9f-163c-467b-ad50-5e692bbf5df0-1675651956e30ee789-1",
+        "template--17631060951356__aecd3c9f-163c-467b-ad50-5e692bbf5df0-1675651956e30ee789-2",
+        "5e211d90-c395-47f1-be6e-f7352f59b54a"
+      ],
+      "settings": {
+        "section_background": "#ffffff",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "number_column": 4,
+        "heading": "",
+        "heading_size_range": 1,
+        "description": "",
+        "description_size": "heading--xsmall",
+        "margin_desktop": "",
+        "margin_tablet": "",
+        "margin_mobile": ""
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 3,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "9a34483c-af94-4f84-8d47-382e46f994de": {
+      "type": "product-list",
+      "settings": {
+        "fullwidth": false,
+        "section_background": "#ffffff",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "prev_next_button_background": "#ffffff",
+        "prev_next_button_color": "#282828",
+        "products_per_row": 4,
+        "products_per_row_mobile": 2,
+        "products_per_row_tablet": 3,
+        "products_per_row_desktop": 4,
+        "tab_heading": "New products",
+        "tab_heading_size": 3,
+        "tab_description": "",
+        "tab_name_size": "",
+        "view_more": false,
+        "collection": "case-computer-case",
+        "limit": 10
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "aecd3c9f-163c-467b-ad50-5e692bbf5df0",
+    "product-grid",
+    "9a34483c-af94-4f84-8d47-382e46f994de"
+  ]
+}

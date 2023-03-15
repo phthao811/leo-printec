@@ -1,190 +1,146 @@
-{{ 'template-collection.css' | asset_url | stylesheet_tag }}
-{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'component-price.css' | asset_url | stylesheet_tag }}
-
-<link
-  rel="preload"
-  href="{{ 'component-rte.css' | asset_url }}"
-  as="style"
-  onload="this.onload=null;this.rel='stylesheet'"
->
-
-{%- if section.settings.enable_quick_add -%}
-  <link rel="stylesheet" href="{{ 'quick-add.css' | asset_url }}" media="print" onload="this.media='all'">
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
-<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+{% style %}
+  #shopify-section-{{ section.id }} {
+    --section-products-per-row: 1;
+    --ap-productlist-block-spacing: 30px;
   }
 
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
+  @media screen and (min-width: 741px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.columns_desktop }};
     }
   }
-{%- endstyle -%}
+  @media screen and (min-width: 1400px) {
+    #shopify-section-{{ section.id }} {
+      --section-products-per-row: {{ section.settings.columns_desktop }};
+    }
+  }
+  #block-template--14993172660432__main-e231065e-5bdb-4483-91fc-79c63ebbcffc {
+    --heading-color: 255, 255, 255;
+    --text-color: 255, 255, 255;
+    --section-block-background: 247, 248, 253;
+    --primary-button-background: 255, 255, 255;
+    --primary-button-text-color: 30, 49, 106;--section-blocks-alignment: center;
+  }
+  #block-template--14993172660432__main-cb5ead93-c537-42ed-9e12-32caae9a0fff {
+    --heading-color: 255, 255, 255;
+    --text-color: 255, 255, 255;
+    --section-block-background: 247, 248, 253;
+    --primary-button-background: 255, 255, 255;
+    --primary-button-text-color: 30, 49, 106;--section-blocks-alignment: center;
+  }
+  .ap-productlist__inner {
+    margin: 0 -15px;
+  }
 
-<div class="section-{{ section.id }}-padding">
-  {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-  {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-    <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
-      <form class="facets-vertical-form" id="FacetSortForm">
-        <div class="facet-filters sorting caption">
-          <div class="facet-filters__field">
-            <h2 class="facet-filters__label caption-large text-body">
-              <label for="SortBy">{{ 'products.facets.sort_by_label' | t }}</label>
-            </h2>
-            <div class="select">
-              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
-              <select
-                name="sort_by"
-                class="facet-filters__sort select__select caption-large"
-                id="SortBy"
-                aria-describedby="a11y-refresh-page-message"
-              >
-                {%- for option in collection.sort_options -%}
-                  <option
-                    value="{{ option.value | escape }}"
+  /*
+  IMPLEMENTATION NOTE: due to design requirements, the mobile toolbar (with filters and sort by) had to be moved to the
+  layout file. However as section settings cannot be accessed outside the section itself, we simply hide them in CSS.
+  */
+
+  @media screen and (max-width: 999px) {
+    :root {
+      --anchor-offset: 60px;
+    }
+  }
+  @media screen and (max-width: 740px) {
+    .ap-productlist {
+      --ap-productlist-column-gap: 0px;
+    }
+  }
+{% endstyle %}
+
+{%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+<section>
+  <div class="container">
+    <ap-productfacet class="ap-productfacet" section-id="{{ section.id }}">
+      {% render 'product-filter', sort_by: sort_by %}
+
+      <div id="facet-main" class="ap-productfacet__main anchor" role="region" aria-live="polite">
+        
+
+        <div class="ap-productfacet__meta-bar anchor">
+          <span class="ap-productfacet__meta-bar-item ap-productfacet__meta-bar-item--count" role="status">{{ collection.products_count }} products</span>
+          <div class="ap-productfacet__meta-bar-item ap-productfacet__meta-bar-item--sort">
+            <span class="ap-productfacet__sort-by-title text--subdued hd-pocket">Sort by</span>
+            <div class="popover-container">
+              <button type="button" is="toggle-button" class="popover-button hd-pocket" ap-expanded-aria="false" ap-controlsaria="ap-sortbypopover">
+                <span id="sort-by-selected-value" style="pointer-events: none">
+                  {%- for option in collection.sort_options -%}
                     {% if option.value == sort_by %}
-                      selected="selected"
+                      {{ option.name | escape }}
                     {% endif %}
-                  >
-                    {{ option.name | escape }}
-                  </option>
-                {%- endfor -%}
-              </select>
-              {% render 'icon-caret' %}
+                  {%- endfor -%}
+                </span>
+                <svg focusable="false" width="12" height="8" class="icon icon--chevron icon--inline  " viewBox="0 0 12 8">
+                  <path fill="none" d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2"></path>
+                </svg>
+              </button>
+
+              <ap-sortbypopover id="ap-sortbypopover" class="popover">
+                <span class="popover__overlay"></span>
+                <header class="popover__header">
+                  <span class="popover__title heading h6">Sort by</span>
+                  <button type="button" class="popover__close-button tap-area tap-area--large" data-action="close" title="Close">
+                    <svg focusable="false" width="14" height="14" class="icon icon--close   " viewBox="0 0 14 14">
+                      <path d="M13 13L1 1M13 1L1 13" stroke="currentColor" stroke-width="2" fill="none"></path>
+                    </svg>
+                  </button>
+                </header>
+
+                <div class="popover__content">
+                  <div class="popover__choice-list">
+                    {%- for option in collection.sort_options -%}
+                      <label class="popover__choice-item">
+                        <input type="radio" data-bind-value="sort-by-selected-value" class="visually-hidden" {% if option.value == sort_by %}checked="checked"{% endif %} name="sort_by" value="{{ option.value | escape }}" title="{{ option.name | escape }}">
+                        <span class="popover__choice-label">{{ option.name | escape }}</span>
+                      </label>
+                    {%- endfor -%}
+                  </div>
+                </div>
+              </ap-sortbypopover>
             </div>
           </div>
-          <noscript>
-            <button type="submit" class="facets__button-no-js button button--secondary">
-              {{ 'products.facets.sort_button' | t }}
-            </button>
-          </noscript>
         </div>
 
-        <div class="product-count-vertical light" role="status">
-          <h2 class="product-count__text text-body">
-            <span id="ProductCountDesktop">
-              {%- if collection.results_count -%}
-                {{
-                  'templates.search.results_with_count'
-                  | t: terms: collection.terms, count: collection.results_count
-                }}
-              {%- elsif collection.products_count == collection.all_products_count -%}
-                {{ 'products.facets.product_count_simple' | t: count: collection.products_count }}
-              {%- else -%}
-                {{
-                  'products.facets.product_count'
-                  | t: product_count: collection.products_count, count: collection.all_products_count
-                }}
-              {%- endif -%}
-            </span>
-          </h2>
-          <div class="loading-overlay__spinner">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              class="spinner"
-              viewBox="0 0 66 66"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-            </svg>
-          </div>
-        </div>
-      </form>
-    </facet-filters-form>
-  {%- endif -%}
-
-  <div class="{% if section.settings.filter_type == 'vertical' %} facets-vertical page-width{% endif %}">
-    {{ 'component-facets.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
-    {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
-      <aside
-        aria-labelledby="verticalTitle"
-        class="facets-wrapper{% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
-        id="main-collection-filters"
-        data-id="{{ section.id }}"
-      >
-        {% render 'facets',
-          results: collection,
-          enable_filtering: section.settings.enable_filtering,
-          enable_sorting: section.settings.enable_sorting,
-          filter_type: section.settings.filter_type
+        {% liquid
+          assign products_per_page = 12
+          if section.settings.products_per_page
+            assign products_per_page = section.settings.products_per_page
+          endif
         %}
-      </aside>
-    {%- endif -%}
-
-    <div class="product-grid-container" id="ProductGridContainer">
-      {%- paginate collection.products by section.settings.products_per_page -%}
-        {%- if collection.products.size == 0 -%}
-          <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
-            <div class="loading-overlay gradient"></div>
-            <div class="title-wrapper center">
-              <h2 class="title title--primary">
-                {{ 'sections.collection_template.empty' | t -}}
-                <br>
-                {{
-                  'sections.collection_template.use_fewer_filters_html'
-                  | t: link: collection.url, class: 'underlined-link link'
-                }}
-              </h2>
-            </div>
-          </div>
-        {%- else -%}
-          <div class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}">
-            <div class="loading-overlay gradient"></div>
-
-            <ul
-              id="product-grid"
-              data-id="{{ section.id }}"
-              class="
-                grid product-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down
-                grid--{{ section.settings.columns_desktop }}-col-desktop
-              "
-            >
+        {%- paginate collection.products by products_per_page -%}
+          <ap-productlist class="ap-productfacet__ap-productlist ap-productlist anchor ap-object-loaded" stagger-apparition="">
+            <div id="ap_productlist" class="ap-productlist__inner">
               {%- for product in collection.products -%}
-                {% assign lazy_load = false %}
-                {%- if forloop.index > 2 -%}
-                  {%- assign lazy_load = true -%}
-                {%- endif -%}
-                <li class="grid__item">
-                  {% render 'card-product',
-                    card_product: product,
-                    media_aspect_ratio: section.settings.image_ratio,
-                    show_secondary_image: section.settings.show_secondary_image,
-                    show_vendor: section.settings.show_vendor,
-                    show_rating: section.settings.show_rating,
-                    lazy_load: lazy_load,
-                    show_quick_add: section.settings.enable_quick_add,
-                    section_id: section.id
-                  %}
-                </li>
+                {% render 'product-grid', product: product %}
               {%- endfor -%}
-            </ul>
+            </div>
+            <div id="ap_loadmoreproduct">
+              <div id="loading-more-product-icon" style="display:none">
+                {% render 'icon-loading' %}
+              </div>
+              <input type="hidden" id="ap_page_load" value="1">
+              <input type="hidden" id="ap_page_limit" value="16">
+              <input type="hidden" id="ap_page_link" value="{{ collection.url }}">
+            </div>
+          </ap-productlist>
 
-            {%- if paginate.pages > 1 -%}
-              {% render 'pagination', paginate: paginate, anchor: '' %}
-            {%- endif -%}
-          </div>
-        {%- endif -%}
-      {%- endpaginate -%}
-    </div>
+          {%- if paginate.pages > 1 -%}
+            {% render 'pagination', paginate: paginate, anchor: '' %}
+          {%- endif -%}
+        {%- endpaginate -%}
+
+        
+
+      </div>
+    </ap-productfacet>
   </div>
-</div>
+</section>
 
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
-  "class": "section",
+  "class": "shopify-section--main-collection",
   "settings": [
     {
       "type": "range",
@@ -201,7 +157,7 @@
       "min": 1,
       "max": 5,
       "step": 1,
-      "default": 4,
+      "default": 3,
       "label": "t:sections.main-collection-product-grid.settings.columns_desktop.label"
     },
     {

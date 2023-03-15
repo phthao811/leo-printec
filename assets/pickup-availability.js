@@ -24,7 +24,7 @@ if (!customElements.get('pickup-availability')) {
             .parseFromString(text, 'text/html')
             .querySelector('.shopify-section');
           this.renderPreview(sectionInnerHTML);
-        })
+        })   
         .catch(e => {
           const button = this.querySelector('button');
           if (button) button.removeEventListener('click', this.onClickRefreshList);

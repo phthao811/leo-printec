@@ -1,0 +1,5 @@
+<ap-loadmoreproduct section-id="{{ section.id }}" class="section section--flush">
+    {%- for product in predictive_search.resources.products -%}
+        {% render 'product-grid', product: product %}
+    {% endfor %}
+</ap-loadmoreproduct>

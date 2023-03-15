@@ -28,10 +28,15 @@
 
 .accordion__title {
   display: inline-block;
-  max-width: calc(100% - 6rem);
+  max-width: unset;
   min-height: 1.6rem;
   margin: 0;
-  word-break: break-word;
+  word-break: inherit;
+}
+
+svg.icon.icon-caret {
+  width: 20px;
+  height: 20px;
 }
 
 .accordion .icon-accordion {

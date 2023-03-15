@@ -27,7 +27,7 @@
 
 .deferred-media:not([loaded]) template {
   z-index: -1;
-}
+}   
 
 .deferred-media[loaded] > .deferred-media__poster {
   display: none;

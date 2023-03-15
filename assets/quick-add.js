@@ -6,7 +6,7 @@ if (!customElements.get('quick-add-modal')) {
     }
 
     hide(preventFocus = false) {
-      const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+      const cartNotification = document.querySelector('ap-cartnotification') || document.querySelector('ap-cartdrawer');
       if (cartNotification) cartNotification.setActiveElement(this.openedBy);
       this.modalContent.innerHTML = '';
 
@@ -31,7 +31,7 @@ if (!customElements.get('quick-add-modal')) {
           if (window.Shopify && Shopify.PaymentButton) {
             Shopify.PaymentButton.init();
           }
-
+   
           if (window.ProductModel) window.ProductModel.loadShopifyXR();
 
           this.removeGalleryListSemantic();
@@ -61,10 +61,7 @@ if (!customElements.get('quick-add-modal')) {
     }
 
     preventVariantURLSwitching() {
-      const variantPicker = this.modalContent.querySelector('variant-radios,variant-selects');
-      if (!variantPicker) return;
-
-      variantPicker.setAttribute('data-update-url', 'false');
+      this.modalContent.querySelector('variant-radios,variant-selects').setAttribute('data-update-url', 'false');
     }
 
     removeDOMElements() {
@@ -73,16 +70,13 @@ if (!customElements.get('quick-add-modal')) {
 
       const productModal = this.productElement.querySelector('product-modal');
       if (productModal) productModal.remove();
-
-      const modalDialog = this.productElement.querySelectorAll('modal-dialog');
-      if (modalDialog) modalDialog.forEach(modal => modal.remove());
     }
 
     preventDuplicatedIDs() {
       const sectionId = this.productElement.dataset.section;
       this.productElement.innerHTML = this.productElement.innerHTML.replaceAll(sectionId, `quickadd-${ sectionId }`);
-      this.productElement.querySelectorAll('variant-selects, variant-radios, product-info').forEach((element) => {
-        element.dataset.originalSection = sectionId;
+      this.productElement.querySelectorAll('variant-selects, variant-radios').forEach((variantSelect) => {
+        variantSelect.dataset.originalSection = sectionId;
       });
     }
 

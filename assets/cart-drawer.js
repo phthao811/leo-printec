@@ -6,7 +6,7 @@ class CartDrawer extends HTMLElement {
     this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));
     this.setHeaderCartIconAccessibility();
   }
-
+   
   setHeaderCartIconAccessibility() {
     const cartLink = document.querySelector('#cart-icon-bubble');
     cartLink.setAttribute('role', 'button');
@@ -47,14 +47,14 @@ class CartDrawer extends HTMLElement {
 
   setSummaryAccessibility(cartDrawerNote) {
     cartDrawerNote.setAttribute('role', 'button');
-    cartDrawerNote.setAttribute('aria-expanded', 'false');
+    cartDrawerNote.setAttribute('ap-expanded-aria', 'false');
 
     if(cartDrawerNote.nextElementSibling.getAttribute('id')) {
-      cartDrawerNote.setAttribute('aria-controls', cartDrawerNote.nextElementSibling.id);
+      cartDrawerNote.setAttribute('ap-controlsaria', cartDrawerNote.nextElementSibling.id);
     }
 
     cartDrawerNote.addEventListener('click', (event) => {
-      event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));
+      event.currentTarget.setAttribute('ap-expanded-aria', !event.currentTarget.closest('details').hasAttribute('open'));
     });
 
     cartDrawerNote.parentElement.addEventListener('keyup', onKeyUpEscape);
@@ -84,7 +84,7 @@ class CartDrawer extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'cart-drawer',
+        id: 'ap-cartdrawer',
         selector: '#CartDrawer'
       },
       {
@@ -104,14 +104,14 @@ class CartDrawer extends HTMLElement {
   }
 }
 
-customElements.define('cart-drawer', CartDrawer);
+customElements.define('ap-cartdrawer', CartDrawer);
 
 class CartDrawerItems extends CartItems {
   getSectionsToRender() {
     return [
       {
         id: 'CartDrawer',
-        section: 'cart-drawer',
+        section: 'ap-cartdrawer',
         selector: '.drawer__inner'
       },
       {
@@ -123,4 +123,4 @@ class CartDrawerItems extends CartItems {
   }
 }
 
-customElements.define('cart-drawer-items', CartDrawerItems);
+customElements.define('ap-cartdrawer-items', CartDrawerItems);

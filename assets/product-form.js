@@ -1,14 +1,14 @@
-if (!customElements.get('product-form')) {
-  customElements.define('product-form', class ProductForm extends HTMLElement {
+if (!customElements.get('ap-productform')) {
+  customElements.define('ap-productform', class ProductForm extends HTMLElement {
     constructor() {
       super();
 
       this.form = this.querySelector('form');
       this.form.querySelector('[name=id]').disabled = false;
       this.form.addEventListener('submit', this.onSubmitHandler.bind(this));
-      this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
+      this.cart = document.querySelector('ap-cartnotification') || document.querySelector('ap-cartdrawer');
       this.submitButton = this.querySelector('[type="submit"]');
-      if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
+      if (document.querySelector('ap-cartdrawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');
     }
 
     onSubmitHandler(evt) {
@@ -24,7 +24,7 @@ if (!customElements.get('product-form')) {
       const config = fetchConfig('javascript');
       config.headers['X-Requested-With'] = 'XMLHttpRequest';
       delete config.headers['Content-Type'];
-
+   
       const formData = new FormData(this.form);
       if (this.cart) {
         formData.append('sections', this.cart.getSectionsToRender().map((section) => section.id));
@@ -51,7 +51,6 @@ if (!customElements.get('product-form')) {
             return;
           }
 
-          if (!this.error) publish(PUB_SUB_EVENTS.cartUpdate, {source: 'product-form'});
           this.error = false;
           const quickAddModal = this.closest('quick-add-modal');
           if (quickAddModal) {
@@ -75,9 +74,9 @@ if (!customElements.get('product-form')) {
     }
 
     handleErrorMessage(errorMessage = false) {
-      this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector('.product-form__error-message-wrapper');
+      this.errorMessageWrapper = this.errorMessageWrapper || this.querySelector('.ap-productform__error-message-wrapper');
       if (!this.errorMessageWrapper) return;
-      this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.product-form__error-message');
+      this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.ap-productform__error-message');
 
       this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);
 

@@ -34,7 +34,7 @@
 
 .customer ul a {
   display: inline;
-}
+}   
 
 .customer strong {
   font-weight: normal;
@@ -210,7 +210,7 @@
 /* works around colspan phantom border issues */
 .customer thead::after,
 .customer tfoot::before {
-  content: ' ';
+  content: " ";
   height: 0.1rem;
   width: 100%;
   display: block;
@@ -316,8 +316,8 @@
   transform: rotate(-90deg);
 }
 
-.customer .pagination li [aria-current]::after {
-  content: '';
+.customer .pagination li [ap-currentaria]::after {
+  content: "";
   display: block;
   width: 2rem;
   height: 0.01rem;
@@ -335,7 +335,7 @@
   width: fit-content;
 }
 
-.login a[href='#recover'] {
+.login a[href="#recover"] {
   margin-left: 0;
   margin-right: 0;
 }
@@ -385,7 +385,7 @@
   margin-bottom: 0;
 }
 
-.activate button[name='decline'],
+.activate button[name="decline"],
 .addresses li > button,
 .addresses form button[type] {
   background-color: rgba(var(--color-background), var(--alpha-button-background));
@@ -393,7 +393,7 @@
 }
 
 @media only screen and (min-width: 750px) {
-  .activate button[name='decline'] {
+  .activate button[name="decline"] {
     margin-top: inherit;
     margin-left: 1rem;
   }
@@ -673,8 +673,8 @@
   margin-right: 1rem;
 }
 
-label[for='AddressCountryNew'],
-label[for='AddressProvinceNew'] {
+label[for="AddressCountryNew"],
+label[for="AddressProvinceNew"] {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 0.6rem;
@@ -700,11 +700,11 @@ li[data-address] {
   margin-top: 5rem;
 }
 
-.addresses [aria-expanded='false'] ~ div[id] {
+.addresses [ap-expanded-aria="false"] ~ div[id] {
   display: none;
 }
 
-.addresses [aria-expanded='true'] ~ div[id] {
+.addresses [ap-expanded-aria="true"] ~ div[id] {
   display: block;
 }
 
@@ -728,7 +728,7 @@ li[data-address] > h2 {
   margin-bottom: 0;
 }
 
-.addresses input[type='checkbox'] {
+.addresses input[type="checkbox"] {
   margin-top: 2rem;
   margin-left: 0;
 }
@@ -753,3 +753,43 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+/* USER  */
+h1#login {
+  text-transform: uppercase;
+}
+.login .field label ,
+.register .field label {
+  display: none;
+}
+.login .field input ,
+.register .field input {
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+}
+.form__message {
+  display: flex;
+  gap: 5px;
+  margin-top: 8px;
+}
+.form__message svg {
+  width: 20px;
+  height: 20px;
+}
+.customer button {
+  padding: 15px 50px;
+  background-color: var(--primary);
+  line-height: 1;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+}
+.customer button:hover {
+  opacity: .8;
+}
+
+/* END  */

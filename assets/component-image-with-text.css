@@ -1,54 +1,46 @@
-.image-with-text .grid {
+.ap-imagewithtext .grid {
   margin-bottom: 0;
 }
 
-.image-with-text .grid__item {
+.ap-imagewithtext .grid__item {
   position: relative;
 }
 
 @media screen and (min-width: 750px) {
-  .image-with-text__grid--reverse {
+  .ap-imagewithtext__grid--reverse {
     flex-direction: row-reverse;
   }
 }
 
-.image-with-text__media {
+.ap-imagewithtext__media {
   min-height: 100%;
   overflow: visible;
 }
 
-.image-with-text__media--small {
+.ap-imagewithtext__media--small {
   height: 19.4rem;
 }
 
-.image-with-text__media--medium {
-  height: 29.6rem;
-}
-
-.image-with-text__media--large {
+.ap-imagewithtext__media--large {
   height: 43.5rem;
 }
 
 @media screen and (min-width: 750px) {
-  .image-with-text__media--small {
+  .ap-imagewithtext__media--small {
     height: 31.4rem;
   }
-
-  .image-with-text__media--medium {
-    height: 46rem;
-  }
-
-  .image-with-text__media--large {
+   
+  .ap-imagewithtext__media--large {
     height: 69.5rem;
   }
 }
 
-.image-with-text__media--placeholder {
+.ap-imagewithtext__media--placeholder {
   position: relative;
   overflow: hidden;
 }
 
-.image-with-text__media--placeholder:after {
+.ap-imagewithtext__media--placeholder:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -56,17 +48,17 @@
   background: rgba(var(--color-foreground), 0.04);
 }
 
-.image-with-text__media--placeholder.image-with-text__media--adapt {
+.ap-imagewithtext__media--placeholder.ap-imagewithtext__media--adapt {
   height: 20rem;
 }
 
 @media screen and (min-width: 750px) {
-  .image-with-text__media--placeholder.image-with-text__media--adapt {
+  .ap-imagewithtext__media--placeholder.ap-imagewithtext__media--adapt {
     height: 30rem;
   }
 }
 
-.image-with-text__media--placeholder > svg {
+.ap-imagewithtext__media--placeholder > svg {
   position: absolute;
   left: 50%;
   max-width: 80rem;
@@ -76,7 +68,7 @@
   fill: currentColor;
 }
 
-.image-with-text__content {
+.ap-imagewithtext__content {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -88,7 +80,7 @@
   z-index: 1;
 }
 
-.image-with-text .grid__item::after {
+.ap-imagewithtext .grid__item::after {
   content: '';
   position: absolute;
   top: 0;
@@ -98,7 +90,7 @@
   z-index: -1;
 }
 
-.image-with-text:not(.image-with-text--overlap) .image-with-text__media-item:after {
+.ap-imagewithtext:not(.ap-imagewithtext--overlap) .ap-imagewithtext__media-item:after {
   border-radius: var(--media-radius);
   box-shadow: var(--media-shadow-horizontal-offset)
     var(--media-shadow-vertical-offset)
@@ -106,7 +98,7 @@
     rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
-.image-with-text:not(.image-with-text--overlap) .image-with-text__text-item:after {
+.ap-imagewithtext:not(.ap-imagewithtext--overlap) .ap-imagewithtext__text-item:after {
   border-radius: var(--text-boxes-radius);
   box-shadow: var(--text-boxes-shadow-horizontal-offset)
     var(--text-boxes-shadow-vertical-offset)
@@ -114,7 +106,7 @@
     rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
-.image-with-text .image-with-text__media-item > * {
+.ap-imagewithtext .ap-imagewithtext__media-item > * {
   border-radius: var(--media-radius);
   overflow: hidden;
   box-shadow: var(--media-shadow-horizontal-offset)
@@ -123,11 +115,11 @@
     rgba(var(--color-shadow), var(--media-shadow-opacity));
 }
 
-.image-with-text .global-media-settings {
+.ap-imagewithtext .global-media-settings {
   overflow: hidden !important;
 }
 
-.image-with-text .image-with-text__text-item > * {
+.ap-imagewithtext .ap-imagewithtext__text-item > * {
   border-radius: var(--text-boxes-radius);
   overflow: hidden;
   box-shadow: var(--text-boxes-shadow-horizontal-offset)
@@ -136,81 +128,81 @@
     rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
 }
 
-.image-with-text:not(.image-with-text--overlap) .image-with-text__media-item > *,
-.image-with-text:not(.image-with-text--overlap) .image-with-text__text-item > * {
+.ap-imagewithtext:not(.ap-imagewithtext--overlap) .ap-imagewithtext__media-item > *,
+.ap-imagewithtext:not(.ap-imagewithtext--overlap) .ap-imagewithtext__text-item > * {
   box-shadow: none;
 }
 
 @media screen and (max-width: 749px) {
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media-item:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__media,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__media img {
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__media-item:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid__item .ap-imagewithtext__media,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__media img {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__text-item:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid__item .image-with-text__content {
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__text-item:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid__item .ap-imagewithtext__content {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
 
-  .image-with-text.collapse-borders:not(.image-with-text--overlap) .image-with-text__content {
+  .ap-imagewithtext.collapse-borders:not(.ap-imagewithtext--overlap) .ap-imagewithtext__content {
     border-top: 0;
   }
 }
 
-.image-with-text__content--mobile-right > * {
+.ap-imagewithtext__content--mobile-right > * {
   align-self: flex-end;
   text-align: right;
 }
 
-.image-with-text__content--mobile-center > * {
+.ap-imagewithtext__content--mobile-center > * {
   align-self: center;
   text-align: center;
 }
 
-.image-with-text--overlap .image-with-text__content {
+.ap-imagewithtext--overlap .ap-imagewithtext__content {
   width: 90%;
   margin: -3rem auto 0;
 }
 
 @media screen and (min-width: 750px) {
-  .image-with-text__grid--reverse .image-with-text__content {
+  .ap-imagewithtext__grid--reverse .ap-imagewithtext__content {
     margin-left: auto;
   }
 
-  .image-with-text__content--bottom {
+  .ap-imagewithtext__content--bottom {
     justify-content: flex-end;
     align-self: flex-end;
   }
 
-  .image-with-text__content--top {
+  .ap-imagewithtext__content--top {
     justify-content: flex-start;
     align-self: flex-start;
   }
 
-  .image-with-text__content--desktop-right > * {
+  .ap-imagewithtext__content--desktop-right > * {
     align-self: flex-end;
     text-align: right;
   }
 
-  .image-with-text__content--desktop-left > * {
+  .ap-imagewithtext__content--desktop-left > * {
     align-self: flex-start;
     text-align: left;
   }
 
-  .image-with-text__content--desktop-center > * {
+  .ap-imagewithtext__content--desktop-center > * {
     align-self: center;
     text-align: center;
   }
 
-  .image-with-text--overlap .image-with-text__text-item {
+  .ap-imagewithtext--overlap .ap-imagewithtext__text-item {
     display: flex;
     padding: 3rem 0;
   }
 
-  .image-with-text--overlap .image-with-text__content {
+  .ap-imagewithtext--overlap .ap-imagewithtext__content {
     height: auto;
     width: calc(100% + 4rem);
     min-width: calc(100% + 4rem);
@@ -218,152 +210,120 @@
     margin-left: -4rem;
   }
 
-  .image-with-text--overlap .image-with-text__grid--reverse .image-with-text__content {
+  .ap-imagewithtext--overlap .ap-imagewithtext__grid--reverse .ap-imagewithtext__content {
     margin-left: 0;
     margin-right: -4rem;
   }
 
-  .image-with-text--overlap .image-with-text__grid--reverse .image-with-text__text-item {
+  .ap-imagewithtext--overlap .ap-imagewithtext__grid--reverse .ap-imagewithtext__text-item {
     justify-content: flex-end;
   }
 
-  .image-with-text--overlap .image-with-text__media-item--top {
+  .ap-imagewithtext--overlap .ap-imagewithtext__media-item--top {
     align-self: flex-start;
   }
 
-  .image-with-text--overlap .image-with-text__media-item--middle {
+  .ap-imagewithtext--overlap .ap-imagewithtext__media-item--middle {
     align-self: center;
   }
 
-  .image-with-text--overlap .image-with-text__media-item--bottom {
+  .ap-imagewithtext--overlap .ap-imagewithtext__media-item--bottom {
     align-self: flex-end;
   }
 
-  .image-with-text__media-item--small,
-  .image-with-text__media-item--large + .image-with-text__text-item {
+  .ap-imagewithtext__media-item--small,
+  .ap-imagewithtext__media-item--large + .ap-imagewithtext__text-item {
     flex-grow: 0;
   }
 
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media-item:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__media img,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__text-item:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content:after {
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__media-item:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__media,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__media img,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__text-item:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__content,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__content:after {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__text-item:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__content,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__content:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media-item:after,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media,
-  .image-with-text.collapse-corners:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__media img {
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__text-item:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__content,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__content:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__media-item:after,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__media,
+  .ap-imagewithtext.collapse-corners:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__media img {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
 
-  .image-with-text.collapse-borders:not(.image-with-text--overlap) .grid:not(.image-with-text__grid--reverse) .image-with-text__content {
+  .ap-imagewithtext.collapse-borders:not(.ap-imagewithtext--overlap) .grid:not(.ap-imagewithtext__grid--reverse) .ap-imagewithtext__content {
     border-left: 0;
   }
 
-  .image-with-text.collapse-borders:not(.image-with-text--overlap) .image-with-text__grid--reverse .image-with-text__content {
+  .ap-imagewithtext.collapse-borders:not(.ap-imagewithtext--overlap) .ap-imagewithtext__grid--reverse .ap-imagewithtext__content {
     border-right: 0;
   }
 }
 
-.image-with-text:not(.collapse-corners, .image-with-text--overlap) .image-with-text__media-item {
+.ap-imagewithtext:not(.collapse-corners, .ap-imagewithtext--overlap) .ap-imagewithtext__media-item {
   z-index: 2;
 }
 
-.image-with-text__content {
+.ap-imagewithtext__content {
   border-radius: var(--text-boxes-radius);
   box-shadow: var(--text-boxes-shadow-horizontal-offset)
     var(--text-boxes-shadow-vertical-offset)
     var(--text-boxes-shadow-blur-radius)
     rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
-  word-break: break-word;
 }
 
 @media screen and (min-width: 990px) {
-  .image-with-text__content {
+  .ap-imagewithtext__content {
     padding: 6rem 7rem 7rem;
   }
 }
 
-.image-with-text__content > * + * {
+.ap-imagewithtext__content > * + * {
   margin-top: 2rem;
 }
 
-.image-with-text__content > .image-with-text__text:empty ~ a {
+.ap-imagewithtext__content > .ap-imagewithtext__text:empty ~ a {
   margin-top: 2rem;
 }
 
-.image-with-text__content > :first-child:is(.image-with-text__heading),
-.image-with-text__text--caption + .image-with-text__heading,
-.image-with-text__text--caption:first-child {
+.ap-imagewithtext__content > :first-child:is(.ap-imagewithtext__heading),
+.ap-imagewithtext__text--caption + .ap-imagewithtext__heading,
+.ap-imagewithtext__text--caption:first-child {
   margin-top: 0;
 }
 
-.image-with-text__content :last-child:is(.image-with-text__heading),
-.image-with-text__text--caption {
+.ap-imagewithtext__content :last-child:is(.ap-imagewithtext__heading),
+.ap-imagewithtext__text--caption {
   margin-bottom: 0;
 }
 
-.image-with-text__content .button + .image-with-text__text {
+.ap-imagewithtext__content .button + .ap-imagewithtext__text {
   margin-top: 2rem;
 }
 
-.image-with-text__content .image-with-text__text + .button {
+.ap-imagewithtext__content .ap-imagewithtext__text + .button {
   margin-top: 3rem;
 }
 
-.image-with-text__heading {
+.ap-imagewithtext__heading {
+  word-break: break-word;
   margin-bottom: 0;
 }
 
-.image-with-text__text p {
+.ap-imagewithtext__text p {
+  word-break: break-word;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 749px) {
-  .collapse-padding .image-with-text__grid .image-with-text__content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .collapse-padding .image-with-text__grid:not(.image-with-text__grid--reverse) .image-with-text__content:not(.image-with-text__content--desktop-center) {
-    padding-right: 0;
-  }
-
-  .collapse-padding .image-with-text__grid--reverse .image-with-text__content:not(.image-with-text__content--desktop-center) {
-    padding-left: 0;
-  }
-}
-
 /* check for flexbox gap in older Safari versions */
 @supports not (inset: 10px) {
-  .image-with-text .grid {
+  .ap-imagewithtext .grid {
     margin-left: 0;
-  }
-}
-
-/*
-  Multirow
-  note: consider removing from this stylesheet if multirow-specific styles increase signficantly
-*/
-.multirow__inner {
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--grid-mobile-vertical-spacing);
-}
-
-@media screen and (min-width: 750px) {
-  .multirow__inner {
-    row-gap: var(--grid-desktop-vertical-spacing);
   }
 }

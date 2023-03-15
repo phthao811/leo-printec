@@ -2,14 +2,14 @@ class CartNotification extends HTMLElement {
   constructor() {
     super();
 
-    this.notification = document.getElementById('cart-notification');
+    this.notification = document.getElementById('ap-cartnotification');
     this.header = document.querySelector('sticky-header');
     this.onBodyClick = this.handleBodyClick.bind(this);
 
     this.notification.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());
     this.querySelectorAll('button[type="button"]').forEach((closeButton) =>
       closeButton.addEventListener('click', this.close.bind(this))
-    );
+    );   
   }
 
   open() {
@@ -44,11 +44,11 @@ class CartNotification extends HTMLElement {
   getSectionsToRender() {
     return [
       {
-        id: 'cart-notification-product',
-        selector: `[id="cart-notification-product-${this.cartItemKey}"]`,
+        id: 'ap-cartnotification-product',
+        selector: `[id="ap-cartnotification-product-${this.cartItemKey}"]`,
       },
       {
-        id: 'cart-notification-button'
+        id: 'ap-cartnotification-button'
       },
       {
         id: 'cart-icon-bubble'
@@ -64,7 +64,7 @@ class CartNotification extends HTMLElement {
 
   handleBodyClick(evt) {
     const target = evt.target;
-    if (target !== this.notification && !target.closest('cart-notification')) {
+    if (target !== this.notification && !target.closest('ap-cartnotification')) {
       const disclosure = target.closest('details-disclosure, header-menu');
       this.activeElement = disclosure ? disclosure.querySelector('summary') : null;
       this.close();
@@ -76,4 +76,4 @@ class CartNotification extends HTMLElement {
   }
 }
 
-customElements.define('cart-notification', CartNotification);
+customElements.define('ap-cartnotification', CartNotification);

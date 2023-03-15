@@ -1,0 +1,93 @@
+<ap-contentmodal section="popup" only-once="" ap-delayapparition="{{ section.settings.time_delay }}" id="newsletter-popup" class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__content">
+      <button type="button" class="modal__close-button tap-area" data-action="close" title="Close">
+        <svg focusable="false" width="14" height="14" class="icon icon--close   " viewBox="0 0 14 14">
+          <path d="M13 13L1 1M13 1L1 13" stroke="currentColor" stroke-width="2" fill="none"></path>
+        </svg>
+      </button>
+      <div class="newsletter-modal ">
+        <div class="newsletter-modal__content  text-container text--center">
+          <h2 class="heading h5">Get 10% off</h2>
+          <p>Promotions, new products and sales. Directly to your inbox.</p>
+          <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="form newsletter-modal__form">
+            <input type="hidden" name="form_type" value="customer">
+            <input type="hidden" name="utf8" value="✓">
+            <input type="hidden" name="contact[tags]" value="newsletter">
+            <input type="hidden" name="contact[context]" value="">
+            <div class="input">
+              <input type="email" id="newsletter[popup][contact][email]" name="contact[email]" class="input__field" required="">
+              <label for="newsletter[popup][contact][email]" class="input__label">Your e-mail</label>
+            </div>
+            <div class="input">
+              <button type="submit" is="loader-button" class="button button--primary button--full">
+                <span class="ap-text-loaderbutton">Subscribe</span>
+                <span class="ap-loader-loaderbutton" hidden="">
+                  <div class="spinner">
+                    <svg focusable="false" width="24" height="24" class="icon icon--spinner" viewBox="25 25 50 50">
+                      <circle cx="50" cy="50" r="20" fill="none" stroke="currentColor" stroke-width="5"></circle>
+                    </svg>
+                  </div>
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</ap-contentmodal>
+
+
+{% schema %}
+{
+  "name": "Popup",
+  "class": "shopify-section--popup",
+  "tag": "section",
+  "max_blocks": 1,
+  "settings": [
+    {
+      "type": "range",
+      "id": "time_delay",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "s",
+      "default": 5,
+      "label": "Time delay"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_list",
+      "name": "Product list",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_name",
+          "default": "Tab name",
+          "label": "Tab name"
+        },
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Select collection"
+        },
+        {
+          "type": "range",
+          "id": "limit",
+          "min": 1,
+          "max": 10,
+          "step": 1,
+          "default": 10,
+          "label": "Limit products"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Popup"
+    }
+  ]
+}
+{% endschema %}

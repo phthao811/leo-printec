@@ -27,7 +27,7 @@ class FacetFiltersForm extends HTMLElement {
     document.querySelectorAll('.js-facet-remove').forEach((element) => {
       element.classList.toggle('disabled', disable);
     });
-  }
+  }   
 
   static renderPage(searchParams, event, updateURLHash = true) {
     FacetFiltersForm.searchParamsPrev = searchParams;
@@ -173,7 +173,7 @@ class FacetFiltersForm extends HTMLElement {
 
   onSubmitHandler(event) {
     event.preventDefault();
-    const sortFilterForms = document.querySelectorAll('facet-filters-form form');
+    const sortFilterForms = document.querySelectorAll('ap-facetfilters-form form');
     if (event.srcElement.className == 'mobile-facets__checkbox') {
       const searchParams = this.createSearchParams(event.target.closest('form'))
       this.onSubmitForm(searchParams, event)
@@ -207,7 +207,7 @@ class FacetFiltersForm extends HTMLElement {
 FacetFiltersForm.filterData = [];
 FacetFiltersForm.searchParamsInitial = window.location.search.slice(1);
 FacetFiltersForm.searchParamsPrev = window.location.search.slice(1);
-customElements.define('facet-filters-form', FacetFiltersForm);
+customElements.define('ap-facetfilters-form', FacetFiltersForm);
 FacetFiltersForm.setListeners();
 
 class PriceRange extends HTMLElement {
@@ -243,7 +243,7 @@ class PriceRange extends HTMLElement {
   }
 }
 
-customElements.define('price-range', PriceRange);
+customElements.define('ap-pricerange', PriceRange);
 
 class FacetRemove extends HTMLElement {
   constructor() {
@@ -259,7 +259,7 @@ class FacetRemove extends HTMLElement {
 
   closeFilter(event) {
     event.preventDefault();
-    const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
+    const form = this.closest('ap-facetfilters-form') || document.querySelector('ap-facetfilters-form');
     form.onActiveFilterClick(event);
   }
 }
