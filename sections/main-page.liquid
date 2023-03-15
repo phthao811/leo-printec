@@ -8,6 +8,30 @@
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    {% if section.settings.bg_img != blank %}
+      background-image: url({{ section.settings.bg_img | image_url: width: 2000 }});
+    {% endif %}
+    {% if section.settings.background_color != blank %}
+      background-color: {{ section.settings.background_color }};
+    {% endif %}
+  }
+  #shopify-section-{{ section.id }} {
+    margin: 0;
+  }
+
+  .main-page-title {
+    color: #fff;
+    margin-bottom: 0;
+  }
+
+  .main-content-page {
+    padding: {{ section.settings.padding }}
+  }
+
+  .title-page-content {
+    color: #000;
+    font-size: 2rem;
+    text-align: center;
   }
 
   @media screen and (min-width: 750px) {
@@ -22,8 +46,13 @@
   <h1 class="main-page-title page-title h0">
     {{ page.title | escape }}
   </h1>
-  <div class="rte">
-    {{ page.content }}
+</div>
+
+<div class="main-content-page">
+  <div class="container">
+    <div class="rte">
+      {{ page.content }}
+    </div>
   </div>
 </div>
 
@@ -31,7 +60,7 @@
 {
   "name": "t:sections.main-page.name",
   "tag": "section",
-  "class": "section",
+  "class": "section section-page-title",
   "settings": [
     {
       "type": "header",
@@ -56,6 +85,24 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding Content Page",
+      "default": "30px 0 60px",
+      "info": "Eg: 20px 20px 20px 20px (corresponds to the positions 'Top' 'Right' 'Bottom' 'Left')"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_img",
+      "label": "Background Image"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#282828"
     }
   ]
 }

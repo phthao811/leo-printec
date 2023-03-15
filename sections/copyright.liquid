@@ -9,7 +9,9 @@
     }
 </style>
   
-<div class="copyright page-width">
+
+<div class="copyright ">
+
     <div class="container">
       <div class="copyright__inner">
         <div class="copyright__aside">
@@ -115,14 +117,16 @@
                             {%- endif -%}
                         </div>
                         {%- when "payment_methods" -%}
-                          <div>
-                            <div class="copyright__payment-methods">
+
+                          <div class="copyright__payment-methods">
+
                             <span class="copyright__payment-methods-label text--xsmall text--subdued">{{ block.settings.label }}</span>
                             <img class="ap-announcementbar__content-image" loading="lazy" sizes="50vw" alt="" loading="lazy" 
                               src="{{ block.settings.payment_methods_image | image_url: width: 400 }}" 
                               width="{{ block.settings.payment_methods_image.width }}" height="{{ block.settings.payment_methods_image.height }}">
                           </div>
-                          </div>
+
+
                     
                 {%- endcase -%}
             {%- endfor -%}
@@ -142,25 +146,30 @@
       "type": "color",
       "id": "background",
       "default": "#282828",
-      "label": "Background"
+      "label": "t:sections.all.background.label"
+
     },
     {
       "type": "color",
       "id": "heading_color",
       "default": "#ffffff",
-      "label": "Heading color"
+      "label": "t:sections.all.heading_color.label"
+
     },
     {
       "type": "color",
       "id": "text_color",
       "default": "#ffffff",
-      "label": "Text color"
+      "label": "t:sections.all.text_color.label"
+
     },
     {
       "type": "color",
       "id": "border_color",
       "default": "#484848",
-      "label": "Border color"
+
+      "label": "t:sections.all.border_color.label"
+
     }
   ],
   "blocks": [
@@ -171,12 +180,15 @@
         {
           "type": "text",
           "id": "label",
-          "label": "Label"
+
+          "label": "t:sections.all.label.label"
+
         },
         {
           "type": "richtext",
           "id": "content",
-          "label": "Content"
+          "label": "t:sections.all.content.label"
+
         }
       ]
     },
@@ -187,12 +199,12 @@
         {
           "type": "text",
           "id": "label",
-          "label": "Label"
+          "label": "t:sections.all.label.label"
         },
         {
           "type": "link_list",
           "id": "menu",
-          "label": "Menu"
+          "label": "t:sections.all.menu.label"
         }
       ]
     },
@@ -203,12 +215,12 @@
         {
           "type": "text",
           "id": "label",
-          "label": "Label"
+          "label": "t:sections.all.label.label"
         },
         {
           "type": "image_picker",
           "id": "payment_methods_image",
-          "label": "Image payment"
+          "label": "t:sections.all.payment_methods_image.label"
         }
       ]
     },
@@ -219,32 +231,32 @@
         {
           "type": "text",
           "id": "label",
-          "label": "Label"
+          "label": "t:sections.all.label.label"
         },
         {
           "type": "text",
           "id": "social_facebook",
-          "label": "Facebook"
+          "label": "t:sections.all.social_facebook.label"
         },
         {
           "type": "text",
           "id": "social_instagram",
-          "label": "Instagram"
+          "label": "t:sections.all.social_instagram.label"
         },
         {
           "type": "text",
           "id": "social_pinterest",
-          "label": "Pinterest"
+          "label": "t:sections.all.social_pinterest.label"
         },
         {
           "type": "text",
           "id": "social_youtube",
-          "label": "Youtube"
+          "label": "t:sections.all.social_youtube.label"
         },
         {
           "type": "text",
           "id": "social_linkedin",
-          "label": "Linkedin"
+          "label": "t:sections.all.social_linkedin.label"
         }
       ]
     }

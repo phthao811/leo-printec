@@ -32,7 +32,7 @@ window.ProductModel = {
         version: '1.0',
         onLoad: this.setupShopifyXR.bind(this),
       },
-    ]);
+    ]);   
   },
 
   setupShopifyXR(errors) {

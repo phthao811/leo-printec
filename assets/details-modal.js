@@ -22,7 +22,7 @@ class DetailsModal extends HTMLElement {
 
   isOpen() {
     return this.detailsContainer.hasAttribute('open');
-  }
+  }   
 
   onSummaryClick(event) {
     event.preventDefault();

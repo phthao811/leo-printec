@@ -2,13 +2,13 @@ const selectors = {
   customerAddresses: '[data-customer-addresses]',
   addressCountrySelect: '[data-address-country-select]',
   addressContainer: '[data-address]',
-  toggleAddressButton: 'button[aria-expanded]',
+  toggleAddressButton: 'button[ap-expanded-aria]',
   cancelAddressButton: 'button[type="reset"]',
   deleteAddressButton: 'button[data-confirm-message]'
 };
 
 const attributes = {
-  expanded: 'aria-expanded',
+  expanded: 'ap-expanded-aria',
   confirmMessage: 'data-confirm-message'
 };
 
@@ -19,7 +19,7 @@ class CustomerAddresses {
     this._setupCountries();
     this._setupEventListeners();
   }
-
+   
   _getElements() {
     const container = document.querySelector(selectors.customerAddresses);
     return container ? {

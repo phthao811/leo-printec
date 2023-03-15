@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-.product .rating-star {
+.main-product .rating-star {
   --letter-spacing: 0.8;
   --font-size: 1.7;
 }
@@ -28,7 +28,7 @@
   font-family: Times;
   margin: 0;
 }
-
+   
 .rating-star::before {
   content: '★★★★★';
   background: linear-gradient(

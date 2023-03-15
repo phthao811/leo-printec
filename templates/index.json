@@ -1,34 +1,263 @@
 {
   "sections": {
-    "image_banner": {
+    "6fe8fbaa-5a22-4c15-86c6-9ad636d793b6": {
+      "type": "slideshow",
+      "blocks": {
+        "template--16958845452582__6fe8fbaa-5a22-4c15-86c6-9ad636d793b6-16686800571d36d11f-0": {
+          "type": "slide",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/01_home_11_computer_shop_c9a8ae34-b9f7-4002-aa02-e5ed3f6f4842.png",
+            "image_mobile": "shopify:\/\/shop_images\/01_home_11_computer_shop_c9a8ae34-b9f7-4002-aa02-e5ed3f6f4842.png",
+            "heading": "",
+            "heading_size": "heading--xsmall",
+            "subheading": "ultimate guide <br> \n<span>Gaming pc<\/span>",
+            "subheading_size": "heading--large",
+            "description": "Buy Selected MSI gaming Desktops Share <br> Your Experience & Score A Monitor",
+            "des_size": "heading--nomal",
+            "color_des": "#ffffff",
+            "button1_label": "Learn More",
+            "link1": "shopify:\/\/collections",
+            "button2_label": "",
+            "link2": "shopify:\/\/collections",
+            "box_size": "medium",
+            "box_align": "left",
+            "text_align": "left",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#f4a51c",
+            "button_text_color": "#ffffff",
+            "blocks_overlay_color": "#000000",
+            "logo_width": 5
+          }
+        },
+        "607b94a5-b04e-4389-b522-67873726d8b3": {
+          "type": "slide",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/revsliders_h11_bg_bdbe94a6-9151-42b4-8931-15e685658178.png",
+            "image_mobile": "shopify:\/\/shop_images\/revsliders_h11_bg_bdbe94a6-9151-42b4-8931-15e685658178.png",
+            "heading": "gaming mouse",
+            "heading_size": "heading--xxsmall",
+            "subheading": "Multi-color <br> \n<span>led backlight<span>",
+            "subheading_size": "heading--large",
+            "description": "3200 DPI",
+            "des_size": "heading--large",
+            "color_des": "#02ffff",
+            "button1_label": "Learn More",
+            "link1": "",
+            "button2_label": "",
+            "link2": "",
+            "box_size": "medium",
+            "box_align": "left",
+            "text_align": "left",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "button_background": "#f4a51c",
+            "button_text_color": "#ffffff",
+            "blocks_overlay_color": "#000000",
+            "logo_width": 5
+          }
+        }
+      },
+      "block_order": [
+        "template--16958845452582__6fe8fbaa-5a22-4c15-86c6-9ad636d793b6-16686800571d36d11f-0",
+        "607b94a5-b04e-4389-b522-67873726d8b3"
+      ],
+      "settings": {
+        "progress_bar_color": "#ffffff",
+        "autoplay_duration": 5,
+        "background_color": "#282828",
+        "slideshow_height": "slideshow--medium",
+        "show_dot": true
+      }
+    },
+    "742da9f9-6946-46ae-8075-c81aaf4bf777": {
+      "type": "child-collections",
+      "blocks": {
+        "template--17631061246268__742da9f9-6946-46ae-8075-c81aaf4bf777-16739233048f6d4835-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "case-computer-case",
+            "image": "shopify:\/\/shop_images\/h11-cta-1.png",
+            "icon_svg": "",
+            "title": "Cases"
+          }
+        },
+        "template--17631061246268__742da9f9-6946-46ae-8075-c81aaf4bf777-16739233048f6d4835-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "keyboards",
+            "image": "shopify:\/\/shop_images\/h11-cta-2.png",
+            "icon_svg": "",
+            "title": "KEYBOARDS"
+          }
+        },
+        "template--17631061246268__742da9f9-6946-46ae-8075-c81aaf4bf777-16739233048f6d4835-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "mice",
+            "image": "shopify:\/\/shop_images\/h11-cta-3_36d1fabb-ddd8-4b8c-8155-28c27c12d85f.png",
+            "icon_svg": "",
+            "title": "MICE"
+          }
+        },
+        "3f99d9a0-7cfd-496c-a375-b5bf42918a6a": {
+          "type": "collection",
+          "settings": {
+            "collection": "headsets",
+            "image": "shopify:\/\/shop_images\/h11-cta-4.png",
+            "icon_svg": "",
+            "title": "hEADSETS"
+          }
+        },
+        "9ce78bb1-9831-4641-b4a0-b07515edbdbc": {
+          "type": "collection",
+          "settings": {
+            "collection": "custom-cooling",
+            "image": "shopify:\/\/shop_images\/h11-cta-5.png",
+            "icon_svg": "",
+            "title": "CUSTOM COOLING"
+          }
+        },
+        "9c8b2b65-0f86-498b-abc2-d709d994fd80": {
+          "type": "collection",
+          "settings": {
+            "collection": "memory",
+            "image": "shopify:\/\/shop_images\/h11-cta-6_805381d5-52e9-4708-95ae-41118c4d5dcb.png",
+            "icon_svg": "",
+            "title": "mEMORY"
+          }
+        }
+      },
+      "block_order": [
+        "template--17631061246268__742da9f9-6946-46ae-8075-c81aaf4bf777-16739233048f6d4835-0",
+        "template--17631061246268__742da9f9-6946-46ae-8075-c81aaf4bf777-16739233048f6d4835-1",
+        "template--17631061246268__742da9f9-6946-46ae-8075-c81aaf4bf777-16739233048f6d4835-2",
+        "3f99d9a0-7cfd-496c-a375-b5bf42918a6a",
+        "9ce78bb1-9831-4641-b4a0-b07515edbdbc",
+        "9c8b2b65-0f86-498b-abc2-d709d994fd80"
+      ],
+      "settings": {
+        "background": "#ffffff",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "color_svg": "#282828",
+        "button_background": "#ffffff",
+        "button_color": "#282828",
+        "shop_bar_label": "TOP CATEGORIES",
+        "heading": "TOP\n<span>CATEGORIES<\/span>",
+        "heading_size": 1,
+        "row_items": 6
+      }
+    },
+    "5f9828c2-2f64-4836-9630-3cb687a81e00": {
+      "type": "collection-2",
+      "blocks": {
+        "template--17631061246268__5f9828c2-2f64-4836-9630-3cb687a81e00-1673927495c7d832c4-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gear-pc",
+            "featured_image": "shopify:\/\/shop_images\/h11_banner-1.png",
+            "highlight": false,
+            "sub_title": "",
+            "sub_color": "#282828",
+            "heading_color": "#ffffff",
+            "heading": "Final Sale",
+            "heading_size_range": 4,
+            "des_collection": "Up to $400 off Headphones",
+            "des_color": "#ffffff",
+            "heading_2": "see detail",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#ffffff",
+            "overlay": "#000000",
+            "overlay_opacity": 1,
+            "link": "",
+            "text_align": "left"
+          }
+        },
+        "template--17631061246268__5f9828c2-2f64-4836-9630-3cb687a81e00-1673927495c7d832c4-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gear-pc",
+            "featured_image": "shopify:\/\/shop_images\/h11_banner-2.png",
+            "highlight": false,
+            "sub_title": "",
+            "sub_color": "#ffffff",
+            "heading_color": "#ffffff",
+            "heading": "Get Ready \n<br>\nwith Asus",
+            "heading_size_range": 4,
+            "des_collection": "The best gear to start gaming",
+            "des_color": "#ffffff",
+            "heading_2": "shop now",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#ffffff",
+            "overlay": "#000000",
+            "overlay_opacity": 1,
+            "link": "",
+            "text_align": "left"
+          }
+        },
+        "template--17631061246268__5f9828c2-2f64-4836-9630-3cb687a81e00-1673927495c7d832c4-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "gear-pc",
+            "featured_image": "shopify:\/\/shop_images\/h11_banner-3.jpg",
+            "highlight": false,
+            "sub_title": "WESTERN DIGITAL",
+            "sub_color": "#ffffff",
+            "heading_color": "#ffffff",
+            "heading": "Speed + Capacity",
+            "heading_size_range": 4,
+            "des_collection": "",
+            "des_color": "#282828",
+            "heading_2": "get a boost",
+            "heading_2_size": "heading--xsmall",
+            "text_color": "#ffffff",
+            "overlay": "#000000",
+            "overlay_opacity": 1,
+            "link": "",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "template--17631061246268__5f9828c2-2f64-4836-9630-3cb687a81e00-1673927495c7d832c4-0",
+        "template--17631061246268__5f9828c2-2f64-4836-9630-3cb687a81e00-1673927495c7d832c4-1",
+        "template--17631061246268__5f9828c2-2f64-4836-9630-3cb687a81e00-1673927495c7d832c4-2"
+      ],
+      "settings": {
+        "background-image": "shopify:\/\/shop_images\/h11_shape_1.png",
+        "section_background": "#ffffff",
+        "heading_color": "#ffffff",
+        "text_color": "#282828",
+        "number_column": 3,
+        "heading": "HOT <span>OFFERS<\/span>",
+        "heading_size_range": 1,
+        "description": "",
+        "description_size": "heading--xsmall"
+      }
+    },
+    "d4fb84f8-9ed2-4da8-b020-fa0982f07bfb": {
       "type": "image-banner",
       "blocks": {
-        "791c68d2-533a-4f41-b795-130ee88bbc28": {
-          "type": "heading_3",
+        "template--17631061246268__d4fb84f8-9ed2-4da8-b020-fa0982f07bfb-1673948200d8955b1b-0": {
+          "type": "heading",
           "settings": {
-            "heading_3": "<strong>PRINTING SERVICES<\/strong>",
+            "heading": "WEEKLY <span> DEALS <\/span>",
             "heading_size": "h1"
           }
         },
-        "0441c9af-175b-4471-bbfe-5f01b2f186a8": {
-          "type": "heading_1",
-          "settings": {
-            "heading_1": "<strong>The leader in <br> quality custom<\/strong>",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
+        "template--17631061246268__d4fb84f8-9ed2-4da8-b020-fa0982f07bfb-1673948200d8955b1b-1": {
           "type": "text",
           "settings": {
-            "text": "Turn your ideas into premium products that leave a lasting impression",
+            "text": "With Best Flash Sale up <span>50% Off<\/span>",
             "text_style": "body"
           }
         },
-        "button": {
+        "template--17631061246268__d4fb84f8-9ed2-4da8-b020-fa0982f07bfb-1673948200d8955b1b-2": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Get Found",
-            "button_link_1": "shopify:\/\/collections\/all",
+            "button_label_1": "View All Deals",
+            "button_link_1": "shopify:\/\/collections",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -37,309 +266,337 @@
         }
       },
       "block_order": [
-        "791c68d2-533a-4f41-b795-130ee88bbc28",
-        "0441c9af-175b-4471-bbfe-5f01b2f186a8",
-        "text",
-        "button"
+        "template--17631061246268__d4fb84f8-9ed2-4da8-b020-fa0982f07bfb-1673948200d8955b1b-0",
+        "template--17631061246268__d4fb84f8-9ed2-4da8-b020-fa0982f07bfb-1673948200d8955b1b-1",
+        "template--17631061246268__d4fb84f8-9ed2-4da8-b020-fa0982f07bfb-1673948200d8955b1b-2"
       ],
       "settings": {
-        "layout": "full-width",
-        "image": "shopify:\/\/shop_images\/Mask_group.png",
+        "image": "shopify:\/\/shop_images\/banner_fbae32d5-e190-47c0-b695-8d262a08cd11.png",
         "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "desktop_content_position": "middle-left",
-        "show_text_box": false,
-        "desktop_content_alignment": "left",
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
         "color_scheme": "background-1",
         "text-color": "#121212",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
-    "40785081-21f1-4b63-85b0-394415aebe5d": {
-      "type": "multicolumn",
+    "d08324ed-9e9d-40d1-b3a0-4529bab9dfbf": {
+      "type": "image-with-text-block",
       "blocks": {
-        "template--18153516368156__40785081-21f1-4b63-85b0-394415aebe5d-1678676119b5194d0a-0": {
-          "type": "column",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-0": {
+          "type": "heading_1",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_group_1_02b6a6f0-4505-416e-8244-0e1e6140af52.png",
-            "title": "",
-            "text": "<h4><strong>BUSINESS CARDS<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
+            "heading_1": "G560",
+            "heading_size": "heading--large"
           }
         },
-        "template--18153516368156__40785081-21f1-4b63-85b0-394415aebe5d-1678676119b5194d0a-1": {
-          "type": "column",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-1": {
+          "type": "heading_2",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_119.png",
-            "title": "",
-            "text": "<h4><strong>MARKETING MATERIALS<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
+            "heading_2": "LIGHTSYNC SPEAKERS",
+            "heading_size_range": 5
           }
         },
-        "template--18153516368156__40785081-21f1-4b63-85b0-394415aebe5d-1678676119b5194d0a-2": {
-          "type": "column",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-2": {
+          "type": "box_content",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_119_1.png",
-            "title": "",
-            "text": "<h4><strong>SIGNS & POSTERS<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
+            "text": "<span>LIGHT <\/span> + SOUND <br> DRIVEN BY GAMES"
           }
         },
-        "50170761-02c8-4294-a65d-f94ca9eca125": {
-          "type": "column",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-3": {
+          "type": "button_readmore",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image_120.png",
-            "title": "",
-            "text": "<h4><strong>CLOTHING & BAGS<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "3d5f2bcd-db52-4502-bca9-6dcf876b6144": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_118.png",
-            "title": "",
-            "text": "<h4><strong>DESIGN SERVICES<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "429aa62d-9544-4705-a488-238e5ed5bc08": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_119_2.png",
-            "title": "",
-            "text": "<h4><strong>INVITATIONS & STATIONERY<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "34b47dd5-bd28-4e46-9caf-f50f8bfa4c4b": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_119_3.png",
-            "title": "",
-            "text": "<h4><strong>LABELS & STICKERS<\/strong><\/h4>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "5e20bc41-3c79-4914-bf46-12f8e415bdd8": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/image_118_1.png",
-            "title": "",
-            "text": "<h4><strong>PHOTO GIFTS & CALENDARS<\/strong><\/h4>",
-            "link_label": "",
+            "read_more": "Shop Now",
             "link": ""
           }
         }
       },
       "block_order": [
-        "template--18153516368156__40785081-21f1-4b63-85b0-394415aebe5d-1678676119b5194d0a-0",
-        "template--18153516368156__40785081-21f1-4b63-85b0-394415aebe5d-1678676119b5194d0a-1",
-        "template--18153516368156__40785081-21f1-4b63-85b0-394415aebe5d-1678676119b5194d0a-2",
-        "50170761-02c8-4294-a65d-f94ca9eca125",
-        "3d5f2bcd-db52-4502-bca9-6dcf876b6144",
-        "429aa62d-9544-4705-a488-238e5ed5bc08",
-        "34b47dd5-bd28-4e46-9caf-f50f8bfa4c4b",
-        "5e20bc41-3c79-4914-bf46-12f8e415bdd8"
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-0",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-1",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-2",
+        "template--17631061246268__d08324ed-9e9d-40d1-b3a0-4529bab9dfbf-16740066065f6a62cf-3"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "description": "",
-        "description_style": "body",
-        "content_direction": "bottom",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "position_content": "grid",
-        "columns_desktop": 4,
-        "column_alignment": "left",
-        "background_style": "white",
-        "show_button_arrow": false,
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_img": "shopify:\/\/shop_images\/h11_bg-1_290efe7e-4b16-493c-a1a9-31b58821ce41.png",
+        "content_position": "full",
+        "content_size": "medium",
+        "content_align": "right",
+        "block_background": "rgba(0,0,0,0)",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_background": "#ffffff",
+        "button_text_color": "#000000",
+        "margin_top": 0
       }
     },
-    "3cbb7dbc-4112-4760-9ce8-3f3d4acff79a": {
-      "type": "rich-text",
+    "5035e41f-919d-412a-a840-4dcf568ea86c": {
+      "type": "product-list",
+      "settings": {
+        "fullwidth": true,
+        "section_background": "#ffffff",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "prev_next_button_background": "#ffffff",
+        "prev_next_button_color": "#282828",
+        "products_per_row": 6,
+        "products_per_row_mobile": 2,
+        "products_per_row_tablet": 4,
+        "products_per_row_desktop": 6,
+        "tab_heading": "FEATURED  <span>PRODUCTS<\/span>",
+        "tab_heading_size": 1,
+        "tab_description": "",
+        "tab_name_size": "",
+        "view_more": false,
+        "collection": "case-computer-case",
+        "limit": 10
+      }
+    },
+    "d4250e5c-36bf-46a3-8612-d26b1b4e20bf": {
+      "type": "image-with-text-block",
       "blocks": {
-        "f29aadd4-9eb6-49bd-b583-a5805921293b": {
-          "type": "caption",
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-0": {
+          "type": "heading_1",
           "settings": {
-            "caption": "Let’s get printing",
-            "text-color": "#7000fe",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
+            "heading_1": "GAMING COLLECTION",
+            "heading_size": "heading--xxsmall"
           }
         },
-        "template--18153516368156__3cbb7dbc-4112-4760-9ce8-3f3d4acff79a-1678677942e2ec8d96-0": {
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-1": {
+          "type": "heading_2",
+          "settings": {
+            "heading_2": "<span>PLAYSTATION 4 <\/span><br>Dualshock Controller",
+            "heading_size_range": 2
+          }
+        },
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-2": {
+          "type": "box_content",
+          "settings": {
+            "text": "SALE PRICE: $125"
+          }
+        },
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-3": {
+          "type": "button_readmore",
+          "settings": {
+            "read_more": "Shop Now",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-0",
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-1",
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-2",
+        "template--17631061246268__d4250e5c-36bf-46a3-8612-d26b1b4e20bf-16740126566e05e652-3"
+      ],
+      "settings": {
+        "bg_img": "shopify:\/\/shop_images\/banner2.png",
+        "content_position": "full",
+        "content_size": "small",
+        "content_align": "left",
+        "block_background": "rgba(0,0,0,0)",
+        "heading_color": "#ffffff",
+        "text_color": "#ffffff",
+        "button_background": "#f4a51c",
+        "button_text_color": "#ffffff",
+        "margin_top": 0
+      }
+    },
+    "10ed4cb4-8a90-4864-8ef4-31a00b67cf42": {
+      "type": "newsletter",
+      "blocks": {
+        "template--17631061246268__10ed4cb4-8a90-4864-8ef4-31a00b67cf42-16740264556e21e191-0": {
           "type": "heading",
           "settings": {
-            "heading": "<p>4 reasons to get printing started with us<\/p>",
-            "heading_size": "h1"
+            "heading": "FIND OUT ABOUT NEW <br> RELEASES AND <span> SPECIALS <\/span>",
+            "heading_text_size": 2
           }
         },
-        "template--18153516368156__3cbb7dbc-4112-4760-9ce8-3f3d4acff79a-1678677942e2ec8d96-1": {
-          "type": "text",
+        "template--17631061246268__10ed4cb4-8a90-4864-8ef4-31a00b67cf42-16740264556e21e191-1": {
+          "type": "paragraph",
           "settings": {
-            "text": "<p>Our dedicated staff makes it easy for you to create a unique design that will impress  your clients and make you stand out from the crowd.<\/p>"
+            "text": "<p>Sign up to our newsletter to receive special offers and the latest news directly in your inbox.<\/p>"
+          }
+        },
+        "template--17631061246268__10ed4cb4-8a90-4864-8ef4-31a00b67cf42-16740264556e21e191-2": {
+          "type": "email_form",
+          "settings": {
+          }
+        },
+        "b94a0a06-947f-4191-bcd0-ff0485b20ce1": {
+          "type": "description",
+          "settings": {
+            "description": "We hate spam, and we respect your privacy."
           }
         }
       },
       "block_order": [
-        "f29aadd4-9eb6-49bd-b583-a5805921293b",
-        "template--18153516368156__3cbb7dbc-4112-4760-9ce8-3f3d4acff79a-1678677942e2ec8d96-0",
-        "template--18153516368156__3cbb7dbc-4112-4760-9ce8-3f3d4acff79a-1678677942e2ec8d96-1"
+        "template--17631061246268__10ed4cb4-8a90-4864-8ef4-31a00b67cf42-16740264556e21e191-0",
+        "template--17631061246268__10ed4cb4-8a90-4864-8ef4-31a00b67cf42-16740264556e21e191-1",
+        "template--17631061246268__10ed4cb4-8a90-4864-8ef4-31a00b67cf42-16740264556e21e191-2",
+        "b94a0a06-947f-4191-bcd0-ff0485b20ce1"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "section_background": "#ffffff",
+        "image_background": "shopify:\/\/shop_images\/h11_bg-3.png",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "button_background": "#f4a51c",
+        "button_color": "#ffffff"
       }
     },
-    "b40448dc-36b2-47ae-b7b7-e3a305d51dec": {
-      "type": "multicolumn",
+    "738e615a-9a96-40ad-b8ad-216f708e6d31": {
+      "type": "testimonial",
       "blocks": {
-        "template--18153516368156__b40448dc-36b2-47ae-b7b7-e3a305d51dec-1678677927fa2bc6e4-0": {
-          "type": "column",
+        "template--17631061246268__738e615a-9a96-40ad-b8ad-216f708e6d31-16740298119b2ee93f-0": {
+          "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/graphic-designer_1.png",
-            "title": "Connect your store",
-            "text": "<p>Connect your store to Printec, add your products, and set your own retail prices<\/p>",
-            "link_label": "",
-            "link": ""
+            "img_icon": "shopify:\/\/shop_images\/box-44.jpg",
+            "content": "“Fringilla iaculis ante torquent a diam a vestibulum diam nisi augue dictumst parturient a vestibulum tortor viverra inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam rutrum.”",
+            "author": "<span>JOHN DOE<\/span> - DESIGN"
           }
         },
-        "template--18153516368156__b40448dc-36b2-47ae-b7b7-e3a305d51dec-1678677927fa2bc6e4-1": {
-          "type": "column",
+        "template--17631061246268__738e615a-9a96-40ad-b8ad-216f708e6d31-16740298119b2ee93f-1": {
+          "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/problem-solve_1.png",
-            "title": "Customer places their order",
-            "text": "<p>A customer buys from your store, we charge for fulfillment, and you keep the profit<\/p>",
-            "link_label": "",
-            "link": ""
+            "img_icon": "shopify:\/\/shop_images\/box-44.jpg",
+            "content": "“Fringilla iaculis ante torquent a diam a vestibulum diam nisi augue dictumst parturient a vestibulum tortor viverra inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam rutrum.”",
+            "author": "<span>JOHN DOE<\/span> - DESIGN"
           }
         },
-        "template--18153516368156__b40448dc-36b2-47ae-b7b7-e3a305d51dec-1678677927fa2bc6e4-2": {
-          "type": "column",
+        "template--17631061246268__738e615a-9a96-40ad-b8ad-216f708e6d31-16740298119b2ee93f-2": {
+          "type": "testimonial",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group.png",
-            "title": "Printes fulfills the order",
-            "text": "<p>We take care of your order from A to Z, and control the whole fulfillment process<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "2ddc6d7e-8f73-40ef-aaf3-15a1406b44d7": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/box_1.png",
-            "title": "Order ships to your customer",
-            "text": "<p>Your customer receives their order with your brand attached to it<\/p>",
-            "link_label": "",
-            "link": ""
+            "img_icon": "shopify:\/\/shop_images\/box-44.jpg",
+            "content": "“Fringilla iaculis ante torquent a diam a vestibulum diam nisi augue dictumst parturient a vestibulum tortor viverra inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam rutrum.”",
+            "author": "<span>JOHN DOE<\/span> - DESIGN"
+
           }
         }
       },
       "block_order": [
-        "template--18153516368156__b40448dc-36b2-47ae-b7b7-e3a305d51dec-1678677927fa2bc6e4-0",
-        "template--18153516368156__b40448dc-36b2-47ae-b7b7-e3a305d51dec-1678677927fa2bc6e4-1",
-        "template--18153516368156__b40448dc-36b2-47ae-b7b7-e3a305d51dec-1678677927fa2bc6e4-2",
-        "2ddc6d7e-8f73-40ef-aaf3-15a1406b44d7"
+        "template--17631061246268__738e615a-9a96-40ad-b8ad-216f708e6d31-16740298119b2ee93f-0",
+        "template--17631061246268__738e615a-9a96-40ad-b8ad-216f708e6d31-16740298119b2ee93f-1",
+        "template--17631061246268__738e615a-9a96-40ad-b8ad-216f708e6d31-16740298119b2ee93f-2"
       ],
       "settings": {
-        "title": "",
-        "heading_size": "h1",
+        "fullwidth": true,
+        "show_nav": false,
+        "bg_testimonial": "shopify:\/\/shop_images\/bg-testimonial.png",
+        "section_background": "#ffffff",
+        "heading": "CUSTOMER <span> REVIEWS",
+        "heading_color": "#ffffff",
+        "heading_size_range": 2,
         "description": "",
-        "description_style": "body",
-        "content_direction": "top",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "position_content": "icon",
-        "columns_desktop": 4,
-        "column_alignment": "center",
-        "background_style": "white",
-        "show_button_arrow": true,
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "description_size": "",
+        "text_color": "#ffffff",
+        "prev_next_button_background": "#ffffff",
+        "prev_next_button_color": "#282828",
+        "collection": "custom-cooling",
+        "featured_image": "shopify:\/\/shop_images\/h11_bg-5_3bd9e242-cee6-4d0b-8e75-df63787ff6af.png",
+        "heading_collection": "",
+        "heading_size_collection": 4,
+        "heading_2": "Be your\n<br>\n<span> Coolest Expert",
+        "heading_2_size": "heading--xsmall",
+        "link": "shopify:\/\/collections\/case-computer-case"
       }
     },
-    "3e114d75-80bf-47b1-8239-b582394ecc54": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured collection",
-        "heading_size": "h1",
-        "description": "<p>kjdk<\/p>",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "fe64f520-8c3a-49f5-a8b2-0ab616c26d1b": {
+    "2c34937b-c49b-45fb-ae58-9e88556169fa": {
       "type": "featured-blog",
       "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
-        "caption": "Add a tagline",
-        "text-color": "#8e6731",
-        "text_style": "caption-with-letter-spacing",
-        "text_size": "medium",
+        "blog_type": "type-2",
+        "section_background": "#ffffff",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "color_info": "#282828",
+        "color_description": "#282828",
+        "color_btn": "#000000",
+        "color_btn_hover": "#282828",
+        "heading": "NEWS & <span>EVENTS<\/span>",
+        "heading_size_range": 1,
+        "description": "",
+        "description_size": "heading--xsmall",
         "blog": "news",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "background-1",
-        "show_image": true,
+        "post_limit": 4,
+        "columns_desktop": 4,
         "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "show_author": true,
+        "show_tag": true,
+        "btn_blog": "Read More",
+        "show_view_all": false
+      }
+    },
+    "ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee": {
+      "type": "logo-list",
+      "blocks": {
+        "template--17443037872444__ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee-1673251378797d3482-0": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-1.png"
+          }
+        },
+        "template--17443037872444__ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee-1673251378797d3482-1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-2.png"
+          }
+        },
+        "template--17443037872444__ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee-1673251378797d3482-2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-3.png"
+          }
+        },
+        "806548f0-c76e-45b9-a507-8d044d15c9a2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-4.png"
+          }
+        },
+        "8111c296-4436-4e11-946b-3fd2afc9ebec": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/brand-5.png"
+          }
+        }
+      },
+      "block_order": [
+        "template--17443037872444__ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee-1673251378797d3482-0",
+        "template--17443037872444__ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee-1673251378797d3482-1",
+        "template--17443037872444__ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee-1673251378797d3482-2",
+        "806548f0-c76e-45b9-a507-8d044d15c9a2",
+        "8111c296-4436-4e11-946b-3fd2afc9ebec"
+      ],
+      "settings": {
+        "section_background": "#ffffff",
+        "heading_color": "#282828",
+        "text_color": "#282828",
+        "number_column": 5,
+        "heading": "",
+        "heading_size_range": 3,
+        "heading_2": "",
+        "heading_2_size_range": 3,
+        "description": "",
+        "description_size": "heading--xsmall"
       }
     }
   },
   "order": [
-    "image_banner",
-    "40785081-21f1-4b63-85b0-394415aebe5d",
-    "3cbb7dbc-4112-4760-9ce8-3f3d4acff79a",
-    "b40448dc-36b2-47ae-b7b7-e3a305d51dec",
-    "3e114d75-80bf-47b1-8239-b582394ecc54",
-    "fe64f520-8c3a-49f5-a8b2-0ab616c26d1b"
+    "6fe8fbaa-5a22-4c15-86c6-9ad636d793b6",
+    "742da9f9-6946-46ae-8075-c81aaf4bf777",
+    "5f9828c2-2f64-4836-9630-3cb687a81e00",
+    "d4fb84f8-9ed2-4da8-b020-fa0982f07bfb",
+    "d08324ed-9e9d-40d1-b3a0-4529bab9dfbf",
+    "5035e41f-919d-412a-a840-4dcf568ea86c",
+    "d4250e5c-36bf-46a3-8612-d26b1b4e20bf",
+    "10ed4cb4-8a90-4864-8ef4-31a00b67cf42",
+    "738e615a-9a96-40ad-b8ad-216f708e6d31",
+    "2c34937b-c49b-45fb-ae58-9e88556169fa",
+    "ac6dba4f-935e-4e8a-b9e6-d05b3b4f8aee"
   ]
 }

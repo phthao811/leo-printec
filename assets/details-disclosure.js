@@ -22,11 +22,11 @@ class DetailsDisclosure extends HTMLElement {
     } else {
       this.animations.forEach(animation => animation.cancel());
     }
-  }
+  }   
 
   close() {
     this.mainDetailsToggle.removeAttribute('open');
-    this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', false);
+    this.mainDetailsToggle.querySelector('summary').setAttribute('ap-expanded-aria', false);
   }
 }
 

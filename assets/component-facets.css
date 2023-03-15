@@ -29,9 +29,9 @@
     grid-template-columns: auto minmax(0, max-content);
     column-gap: 2rem;
   }
-}
+}   
 
-.facet-filters {
+.ap-facetfilters {
   align-items: flex-start;
   display: flex;
   grid-column: 2;
@@ -40,19 +40,19 @@
 }
 
 @media screen and (min-width: 990px) {
-  .facet-filters {
+  .ap-facetfilters {
     padding-left: 3rem;
   }
 }
 
-.facet-filters__label {
+.ap-facetfilters__label {
   display: block;
   color: var(--color-foreground-85);
   font-size: 1.4rem;
   margin: 0 2rem 0 0;
 }
 
-.facet-filters__summary {
+.ap-facetfilters__summary {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,29 +65,29 @@
   border: 0.1rem solid rgba(var(--color-foreground), 0.55);
 }
 
-.facet-filters__summary::after {
+.ap-facetfilters__summary::after {
   position: static;
 }
 
-.facet-filters__field {
+.ap-facetfilters__field {
   align-items: center;
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
 }
 
-.facet-filters__field .select {
+.ap-facetfilters__field .select {
   width: auto;
 }
 
-.facet-filters__field .select:after,
-.facet-filters__field .select:before,
+.ap-facetfilters__field .select:after,
+.ap-facetfilters__field .select:before,
 .mobile-facets__sort .select:after,
 .mobile-facets__sort .select:before {
   content: none;
 }
 
-.facet-filters__field .select__select,
+.ap-facetfilters__field .select__select,
 .mobile-facets__sort .select__select {
   border-radius: 0;
   min-width: auto;
@@ -95,11 +95,11 @@
   transition: none;
 }
 
-.facet-filters button {
+.ap-facetfilters button {
   margin-left: 2.5rem;
 }
 
-.facet-filters__sort {
+.ap-facetfilters__sort {
   background-color: transparent;
   border: 0;
   border-radius: 0;
@@ -111,18 +111,18 @@
   padding-right: 1.75rem;
 }
 
-.facet-filters__sort + .icon-caret {
+.ap-facetfilters__sort + .icon-caret {
   right: 0;
 }
 
 @media screen and (forced-colors: active) {
-  .facet-filters__sort {
+  .ap-facetfilters__sort {
     border: none;
   }
 }
 
-.facet-filters__sort,
-.facet-filters__sort:hover {
+.ap-facetfilters__sort,
+.ap-facetfilters__sort:hover {
   box-shadow: none;
   filter: none;
   transition: none;
@@ -143,22 +143,22 @@
     0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
-.facet-filters__sort:focus-visible {
+.ap-facetfilters__sort:focus-visible {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
   box-shadow: 0 0 0 1rem rgb(var(--color-background)),
     0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
-.facet-filters__sort.focused,
-.no-js .facet-filters__sort:focus {
+.ap-facetfilters__sort.focused,
+.no-js .ap-facetfilters__sort:focus {
   outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
   outline-offset: 1rem;
   box-shadow: 0 0 0 1rem rgb(var(--color-background)),
     0 0 0.2rem 1.2rem rgba(var(--color-foreground), 0.3);
 }
 
-.no-js .facet-filters__sort:focus:not(:focus-visible),
+.no-js .ap-facetfilters__sort:focus:not(:focus-visible),
 .no-js .mobile-facets__sort .select__select:focus:not(:focus-visible) {
   outline: 0;
   box-shadow: none;
@@ -1028,7 +1028,7 @@ input.mobile-facets__checkbox {
     margin-left: 0;
   }
 
-  .facets-vertical .no-js .facet-filters__field {
+  .facets-vertical .no-js .ap-facetfilters__field {
     justify-content: flex-start;
     padding-bottom: 1rem;
     padding-top: 2rem;
@@ -1046,7 +1046,7 @@ input.mobile-facets__checkbox {
     margin-bottom: 1.5rem;
   }
 
-  .no-js .facets-vertical .facet-filters.sorting {
+  .no-js .facets-vertical .ap-facetfilters.sorting {
     padding-left: 0;
     flex-direction: column;
   }
