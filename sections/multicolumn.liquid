@@ -14,6 +14,14 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .arrow-step{
+    display: flex;
+    align-items: center;
+    max-width: 7rem;
+  }
+  .arrow-step:last-child{
+    display: none;
+  }
 {%- endstyle -%}
 
 {%- liquid
@@ -28,16 +36,23 @@
   <div class="page-width section-{{ section.id }}-padding isolate">
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h2 class="title {{ section.settings.heading_size }}">
+        <div class="title-multicolumn">
+          <h2 class="title {{ section.settings.heading_size }}">
           {{ section.settings.title | escape }}
         </h2>
+        <div class="multicolumn__description {{ section.settings.description_style }} rte">
+          {{ section.settings.description }}
+        </div>
+        </div>
         {%- if section.settings.button_label != blank and show_mobile_slider -%}
           <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
         {%- endif -%}
       </div>
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
+
       <ul class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
+
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -55,8 +70,10 @@
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
 
+
           <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}" {{ block.shopify_attributes }}>
             <div class="multicolumn-card content-container">
+
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -89,6 +106,19 @@
               </div>
             </div>
           </li>
+          {%- if section.settings.show_button_arrow -%}
+              <div class="arrow-step">
+                <svg width="90" height="26" viewBox="0 0 90 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 13C6 14.6569 4.65685 16 3 16C1.34315 16 0 14.6569 0 13C0 11.3431 1.34315 10 3 10C4.65685 10 6 11.3431 6 13Z" fill="#DBDDE3"/>
+                  <path d="M22 13C22 14.6569 20.6569 16 19 16C17.3431 16 16 14.6569 16 13C16 11.3431 17.3431 10 19 10C20.6569 10 22 11.3431 22 13Z" fill="#DBDDE3"/>
+                  <path d="M38 13C38 14.6569 36.6569 16 35 16C33.3431 16 32 14.6569 32 13C32 11.3431 33.3431 10 35 10C36.6569 10 38 11.3431 38 13Z" fill="#DBDDE3"/>
+                  <path d="M54 13C54 14.6569 52.6569 16 51 16C49.3431 16 48 14.6569 48 13C48 11.3431 49.3431 10 51 10C52.6569 10 54 11.3431 54 13Z" fill="#DBDDE3"/>
+                  <circle cx="77" cy="13" r="12.25" stroke="#DBDDE3" stroke-width="1.5"/>
+                  <path d="M81 13L75 17L75 9L81 13Z" fill="#7000FE"/>
+                  </svg>
+              </div>
+              {%- endif -%}
+
         {%- endfor -%}
       </ul>
 
@@ -148,6 +178,47 @@
       "label": "t:sections.all.heading_size.label"
     },
     {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.featured-collection.settings.description.label"
+    },
+    {
+      "type": "select",
+      "id": "description_style",
+      "label": "t:sections.featured-collection.settings.description_style.label",
+      "options": [
+        {
+          "value": "body",
+          "label": "t:sections.featured-collection.settings.description_style.options__1.label"
+        },
+        {
+          "value": "subtitle",
+          "label": "t:sections.featured-collection.settings.description_style.options__2.label"
+        },
+        {
+          "value": "uppercase",
+          "label": "t:sections.featured-collection.settings.description_style.options__3.label"
+        }
+      ],
+      "default": "body"
+    },
+    {
+      "type": "select",
+      "id": "content_direction",
+      "options": [
+        {
+          "value": "top",
+          "label": "Image before content"
+        },
+        {
+          "value": "bottom",
+          "label": "Content before image"
+        }
+      ],
+      "default":"bottom",
+      "label": "Content Direction"
+    },
+    {
       "type": "select",
       "id": "image_width",
       "options": [
@@ -192,6 +263,22 @@
       "label": "t:sections.multicolumn.settings.image_ratio.label"
     },
     {
+      "type":"select",
+      "id": "position_content",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "icon",
+          "label": "Content with icon"
+        }
+      ],
+      "default": "grid",
+      "label": "Layout content"
+    },
+    {
       "type": "range",
       "id": "columns_desktop",
       "min": 1,
@@ -227,11 +314,21 @@
         {
           "value": "primary",
           "label": "t:sections.multicolumn.settings.background_style.options__2.label"
+        },
+        {
+          "value": "white",
+          "label": "Background White"
         }
       ],
-      "default": "primary",
+      "default": "white",
       "label": "t:sections.multicolumn.settings.background_style.label"
     },
+    {
+          "type": "checkbox",
+          "id": "show_button_arrow",
+          "default": false,
+          "label": "Show button"
+        },
     {
       "type": "text",
       "id": "button_label",

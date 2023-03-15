@@ -1,3 +1,4 @@
+
 {{ 'announcement-bar.css' | asset_url | stylesheet_tag }}
 
 {% assign number_block = section.blocks | size %}
@@ -68,6 +69,7 @@
         </div>
       {%- endif -%}
         
+
       </div>
 
       {% if section.settings.show_btn %}
@@ -193,6 +195,7 @@
               "label": "t:sections.ap-announcementbar.blocks.announcement.settings.text_size.xsmall.label"
             },
             {
+
               "value": "text--small",
               "label": "t:sections.ap-announcementbar.blocks.announcement.settings.text_size.small.label"
             },
@@ -214,6 +217,7 @@
           "label": "t:sections.ap-announcementbar.blocks.announcement.settings.view_more.label",
           "default": "View more"
         },
+
         {
           "type": "url",
           "id": "link_view",

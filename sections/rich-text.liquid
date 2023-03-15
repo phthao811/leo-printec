@@ -44,6 +44,7 @@
               {%- when 'caption' -%}
                 <h3 class="heading h2">{{ block.settings.caption | escape }}</h3>
               {%- when 'text' -%}
+
                 {{ block.settings.text }}
               {%- when 'button' -%}
                 <div class="rich-text__buttons{% if block.settings.button_label != blank and block.settings.button_label_2 != blank %} rich-text__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
@@ -217,6 +218,11 @@
           "default": "Add a tagline",
           "label": "t:sections.rich-text.blocks.caption.settings.text.label"
         },
+        {
+          "type": "color",
+          "id": "text-color",
+          "label": "Text Color"
+        }, 
         {
           "type": "select",
           "id": "text_style",

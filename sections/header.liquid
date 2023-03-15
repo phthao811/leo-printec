@@ -1,9 +1,11 @@
+
 {%- style -%}
   
   :root {
     --enable-sticky-header: {% if section.settings.sticky_header %}1{% else %}0{% endif %};
     --enable-transparent-header: {% if section.settings.transparent_header %}1{% else %}0{% endif %};
     --ap-loadingbar-background: {{ section.settings.loading_bar_background | color_extract: 'red' }}, {{ section.settings.loading_bar_background | color_extract: 'green' }}, {{ section.settings.loading_bar_background | color_extract: 'blue' }};
+
   }
 
   #shopify-section-header {
@@ -26,6 +28,7 @@
   .header__linklist-link {
     color: {{ section.settings.color_menu }}
   }
+
   .header__linklist-link:hover {
     color: {{ section.settings.color_menu_hover }}
   }
@@ -46,6 +49,7 @@
 <ap-headerstore {% if section.settings.sticky_header %}sticky=""{% endif %} class="header {{ section.settings.header_type }}" role="banner">
   {% render 'header-2' %}
 </ap-headerstore>
+
 
 {% render 'mobile-menu' %}
 
@@ -192,6 +196,37 @@
       "label": "Reduce header padding"
     },
     {
+      "type": "checkbox",
+      "id": "enable_vetical",
+      "label": "Enable Vetical",
+      "default": false
+    },
+    {
+          "type": "select",
+          "id": "icon",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__1.label"
+            },
+            {
+              "value": "fire_color",
+              "label": "Fire color"
+            },
+            {
+              "value": "check_mark",
+              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__8.label"
+            }
+          ],
+          "default": "fire_color",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.label"
+    },
+    { 
+      "type": "text",
+      "id": "promotion",
+      "label": "Infomation"
+    },
+    {
       "type": "header",
       "content": "Logo settings"
     },
@@ -213,6 +248,18 @@
     {
       "type": "header",
       "content": "t:sections.header.settings.menu_settings.content"
+    },
+    {
+      "type":"text",
+      "label": "Heading",
+      "id": "heading_hotline",
+      "default":"Call us: 084 555-0120"
+    },
+    {
+      "type":"text",
+      "label":"Hotline Infomation",
+      "id": "desc_hotline",
+      "default": "Talk to an expert"
     },
     {
       "type": "link_list",

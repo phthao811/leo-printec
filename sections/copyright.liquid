@@ -9,7 +9,9 @@
     }
 </style>
   
+
 <div class="copyright ">
+
     <div class="container">
       <div class="copyright__inner">
         <div class="copyright__aside">
@@ -115,12 +117,16 @@
                             {%- endif -%}
                         </div>
                         {%- when "payment_methods" -%}
+
                           <div class="copyright__payment-methods">
+
                             <span class="copyright__payment-methods-label text--xsmall text--subdued">{{ block.settings.label }}</span>
                             <img class="ap-announcementbar__content-image" loading="lazy" sizes="50vw" alt="" loading="lazy" 
                               src="{{ block.settings.payment_methods_image | image_url: width: 400 }}" 
                               width="{{ block.settings.payment_methods_image.width }}" height="{{ block.settings.payment_methods_image.height }}">
                           </div>
+
+
                     
                 {%- endcase -%}
             {%- endfor -%}
@@ -141,24 +147,29 @@
       "id": "background",
       "default": "#282828",
       "label": "t:sections.all.background.label"
+
     },
     {
       "type": "color",
       "id": "heading_color",
       "default": "#ffffff",
       "label": "t:sections.all.heading_color.label"
+
     },
     {
       "type": "color",
       "id": "text_color",
       "default": "#ffffff",
       "label": "t:sections.all.text_color.label"
+
     },
     {
       "type": "color",
       "id": "border_color",
       "default": "#484848",
+
       "label": "t:sections.all.border_color.label"
+
     }
   ],
   "blocks": [
@@ -169,12 +180,15 @@
         {
           "type": "text",
           "id": "label",
+
           "label": "t:sections.all.label.label"
+
         },
         {
           "type": "richtext",
           "id": "content",
           "label": "t:sections.all.content.label"
+
         }
       ]
     },

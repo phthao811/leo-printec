@@ -1,6 +1,7 @@
 <nav class="{{ _class }}" role="navigation">
   <ap-navigationofdesktop>
     <ul class="header__linklist list--unstyled hd-pocket hd-lap" role="list">
+
       {%- for link in section.settings.menu.links -%}
       {% liquid
         assign menu_index = forloop.index
@@ -124,5 +125,7 @@
           fill="none" stroke="currentColor" stroke-width="2"></path>
       </svg>
     </a>
+
   </div>
+
 </nav>
