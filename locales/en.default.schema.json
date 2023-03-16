@@ -3102,7 +3102,7 @@
           "label": "Enable login"
         },
         "enable_login_icon": {
-          "label": "Only login icon"
+          "label": "Login icon with text"
         }
       },
       "blocks": {

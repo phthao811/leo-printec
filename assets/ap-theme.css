@@ -3950,7 +3950,7 @@ select:focus,
   position: relative;
   z-index: 1;
 }
-.content-box--text-center {
+/* .content-box--text-center {
   text-align: center;
 }
 [dir="ltr"] .content-box--text-right {
@@ -3958,6 +3958,15 @@ select:focus,
 }
 [dir="rtl"] .content-box--text-right {
   text-align: left;
+} */
+.content-box_text--left{
+  text-align: left;
+}
+.content-box_text--right{
+  text-align: right;
+}
+.content-box_text--center{
+  text-align: center;
 }
 @media (max-width: 740px) {
   .content-box--small,

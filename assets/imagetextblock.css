@@ -20,10 +20,10 @@
   font-size: 14px;
 }
 .ap-imagetextblock__text-container {
-  font-size: 40px;
+  /* font-size: 40px;
   text-transform: uppercase;
   line-height: 42px;
-  text-shadow: 2px 0px 3px #000000;
+  text-shadow: 2px 0px 3px #000000; */
 }
 .ap-imagetextblock__text-container > span {
   color: var(--primary);

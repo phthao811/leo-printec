@@ -39,7 +39,7 @@
   flex-direction: column;
 }
 .icon-cart_header svg {
-  height: 28px;
+  height: 22px;
   width: 23.28px;
 }
 .cart-text {
@@ -285,7 +285,7 @@
   }
   .header__secondary-links {
     order: 2;
-    width: 24.664%;
+    /* width: 24.664%; */
     flex: unset;
   }
 }
@@ -340,4 +340,16 @@
   .header-bottom .container {
     padding: 0;
   }
+}
+.header__hotline-image{
+  order: 2;
+  display: flex;
+  width: 25%;
+  justify-content: center;
+}
+.header__hotline-image p{
+  margin: 0
+}
+.list-icon{
+  gap: 1rem;
 }

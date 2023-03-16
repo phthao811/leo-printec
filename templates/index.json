@@ -279,7 +279,6 @@
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
-        "text-color": "#121212",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -475,7 +474,7 @@
             "img_icon": "shopify:\/\/shop_images\/box-44.jpg",
             "content": "“Fringilla iaculis ante torquent a diam a vestibulum diam nisi augue dictumst parturient a vestibulum tortor viverra inceptos adipiscing nec a ullamcorper.Ullamcorper aliquam rutrum.”",
             "author": "<span>JOHN DOE<\/span> - DESIGN"
-
+            
           }
         }
       },

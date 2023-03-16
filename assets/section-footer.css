@@ -517,17 +517,3 @@ noscript .localization-selector.link {
     }
   }
 }
-.footer__blocks-wrapper {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-}
-.footer-block.grid__item:first-child {
-  grid-column: 1/3;
-  grid-column-start: 1;
-  width: 250px;
-}
-.footer-block--content {
-  grid-column: 1/3;
-  grid-column-start: 3;
-  width: 250px!important;
-}

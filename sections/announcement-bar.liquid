@@ -45,7 +45,7 @@
             {%- case block.type -%}
               {%- when 'announcement' -%}
                 <ap-announcementbar-item has-content="" class="ap-announcementbar__item" {% if forloop.index != 1 %}hidden=""{% endif %}>
-                  <div class="ap-announcementbar__message text--small">
+                  <div class="ap-announcementbar__message ap-announcementbar__message--{{ block.settings.text-posision }} text--small">
                     <p>{{ block.settings.text | escape }}
                       <a href="{{ block.settings.link_view }}" class="link" data-action="open-content">{{ block.settings.view_more | escape }}</a>
                     </p>
@@ -56,20 +56,18 @@
   
         </div>
         {%- if section.settings.show_login -%}
-        <div class="announcement-sign">
-          <a href="/account/login" class="header__icon-wrapper tap-area" aria-label="Login">
-            <svg focusable="false" width="18" height="17" class="icon icon--header-customer   " viewBox="0 0 18 17">
-              <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></circle>
-              <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor" stroke-width="2"></path>
-            </svg>
-            <span class="content-sign">
-              {{ section.settings.content_sign }}
-            </span>
-          </a>
-        </div>
-      {%- endif -%}
-        
-
+          <div class="announcement-sign">
+            <a href="/account/login" class="header__icon-wrapper tap-area" aria-label="Login">
+              <svg focusable="false" width="18" height="17" class="icon icon--header-customer   " viewBox="0 0 18 17">
+                <circle cx="9" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></circle>
+                <path d="M1 17v0a4 4 0 014-4h8a4 4 0 014 4v0" fill="none" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+              <span class="content-sign">
+                {{ section.settings.content_sign }}
+              </span>
+            </a>
+          </div>
+        {%- endif -%}
       </div>
 
       {% if section.settings.show_btn %}
@@ -118,9 +116,9 @@
     },
     {
       "type":"checkbox",
-      "id": "show_login",
+      "id":"show_login",
       "default": false,
-      "label": "Show Login"    
+      "label": "Show Login"
     },
     {
       "type": "text",
@@ -195,7 +193,6 @@
               "label": "t:sections.ap-announcementbar.blocks.announcement.settings.text_size.xsmall.label"
             },
             {
-
               "value": "text--small",
               "label": "t:sections.ap-announcementbar.blocks.announcement.settings.text_size.small.label"
             },
@@ -212,12 +209,30 @@
           "label": "t:sections.ap-announcementbar.blocks.announcement.settings.text_size.label"
         },
         {
+          "type": "select",
+          "id":"text-posision",
+          "options":[
+            {
+              "value": "left",
+              "label":"Left"
+            },
+            {
+              "value": "center",
+              "label":"Center"
+            },{
+              "value": "right",
+              "label":"Right"
+            }
+          ],
+          "default": "left",
+          "label": "Text Position"
+        },
+        {
           "type": "text",
           "id": "view_more",
           "label": "t:sections.ap-announcementbar.blocks.announcement.settings.view_more.label",
           "default": "View more"
         },
-
         {
           "type": "url",
           "id": "link_view",

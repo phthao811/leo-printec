@@ -30,9 +30,6 @@
   --color-background: var(--color-base-accent-2);
   --gradient-background: var(--gradient-base-accent-2);
 }
-.color-none{
-  background-color: transparent!important;
-}
 
 .color-foreground-outline-button {
   --color-foreground: var(--color-base-outline-button-labels);
@@ -922,7 +919,6 @@ summary::-webkit-details-marker {
 
 .title-wrapper-with-link {
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
   gap: 1rem;
@@ -2269,11 +2265,8 @@ input[type='checkbox'] {
   }
 
   .header--middle-left {
-    /* grid-template-areas: 'heading navigation icons'; */
-    grid-template-areas:
-        "heading search hotlines icons"
-        "navigation navigation navigation navigation";
-    grid-template-columns: auto 5fr 2fr auto;
+    grid-template-areas: 'heading navigation icons';
+    grid-template-columns: auto auto 1fr;
     column-gap: 2rem;
   }
 
@@ -2651,12 +2644,12 @@ details[open] > .header__submenu {
 }
 
 .header__menu-item:hover span {
-  /* text-decoration: underline; */
+  text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
 
 details[open] > .header__menu-item {
-  /* text-decoration: underline; */
+  text-decoration: underline;
 }
 
 details[open]:hover > .header__menu-item {
@@ -2670,7 +2663,7 @@ details[open] > .header__menu-item .icon-caret {
 .header__active-menu-item {
   transition: text-decoration-thickness var(--duration-short) ease;
   color: rgb(var(--color-foreground));
-  /* text-decoration: underline; */
+  text-decoration: underline;
   text-underline-offset: 0.3rem;
 }
 

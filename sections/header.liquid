@@ -22,13 +22,13 @@
   {% if section.settings.header_type == 'header-2' %}
   .header-bottom {
     background-color: {{ section.settings.bg_header_bottom }};
+    border-top: 1px solid #D9D9D9;
   }
   {% endif %}
 
   .header__linklist-link {
     color: {{ section.settings.color_menu }}
   }
-
   .header__linklist-link:hover {
     color: {{ section.settings.color_menu_hover }}
   }
@@ -49,7 +49,6 @@
 <ap-headerstore {% if section.settings.sticky_header %}sticky=""{% endif %} class="header {{ section.settings.header_type }}" role="banner">
   {% render 'header-2' %}
 </ap-headerstore>
-
 
 {% render 'mobile-menu' %}
 
@@ -196,37 +195,6 @@
       "label": "Reduce header padding"
     },
     {
-      "type": "checkbox",
-      "id": "enable_vetical",
-      "label": "Enable Vetical",
-      "default": false
-    },
-    {
-          "type": "select",
-          "id": "icon",
-          "options": [
-            {
-              "value": "none",
-              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__1.label"
-            },
-            {
-              "value": "fire_color",
-              "label": "Fire color"
-            },
-            {
-              "value": "check_mark",
-              "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.options__8.label"
-            }
-          ],
-          "default": "fire_color",
-          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.icon.label"
-    },
-    { 
-      "type": "text",
-      "id": "promotion",
-      "label": "Infomation"
-    },
-    {
       "type": "header",
       "content": "Logo settings"
     },
@@ -248,18 +216,6 @@
     {
       "type": "header",
       "content": "t:sections.header.settings.menu_settings.content"
-    },
-    {
-      "type":"text",
-      "label": "Heading",
-      "id": "heading_hotline",
-      "default":"Call us: 084 555-0120"
-    },
-    {
-      "type":"text",
-      "label":"Hotline Infomation",
-      "id": "desc_hotline",
-      "default": "Talk to an expert"
     },
     {
       "type": "link_list",
@@ -311,12 +267,34 @@
     },
     {
       "type": "header",
-      "content": "t:sections.header.settings.login_settings.content"
+      "content": "CONTACT SETTINGS"
     },
     {
       "type": "checkbox",
-      "id": "enable_login",
+      "id": "info_contact",
       "default": true,
+      "label":"Enabel Contact"
+    },
+    {
+      "type":"text",
+      "label": "Heading",
+      "id": "heading_hotline",
+      "default":"Call us: 084 555-0120"
+    },
+    {
+      "type":"text",
+      "label":"Hotline Infomation",
+      "id": "desc_hotline",
+      "default": "Talk to an expert"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.login_settings.content"
+    },
+    {
+      "type":"checkbox",
+      "id": "show_login",
+      "default":true,
       "label": "t:sections.header.settings.enable_login.label"
     },
     {
@@ -324,6 +302,44 @@
       "id": "enable_login_icon",
       "default": true,
       "label": "t:sections.header.settings.enable_login_icon.label"
+    },
+    {
+      "type": "text",
+      "id": "content_sign",
+      "default": "Sign in",
+      "label": "t:sections.ap-announcementbar.settings.content_sign.label"
+    },
+    {
+      "type": "header",
+      "content": "WISHLIST SETTINGS"
+    },
+    {
+      "type":"checkbox",
+      "id": "show_wishlist",
+      "default":true,
+      "label": "Enable wishlist"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_wishlist_icon",
+      "default": true,
+      "label": "Icon wishlist with text"
+    },
+    {
+      "type": "text",
+      "id": "content_wishlist",
+      "default": "Wishlist",
+      "label": "Content Wishlist"
+    },
+    {
+      "type": "header",
+      "content": "CART SETTINGS"
+    },
+    {
+      "type":"checkbox",
+      "id": "enable_cart_icon",
+      "default":true,
+      "label": "Icon cart with text"
     }
   ],
   "blocks": [

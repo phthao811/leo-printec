@@ -52,7 +52,7 @@
             {% endif %}
         </div>
         <div class="container container--flush">
-            <div reveal="" class="ap-imagetextblock__content content-box content-box--{{ section.settings.content_size }} content-box--text-{{ section.settings.content_align }} content-box--{{ section.settings.content_position }} text-container">
+            <div reveal="" class="ap-imagetextblock__content content-box content-box_t--{{ section.settings.text_align }} content-box--{{ section.settings.content_size }} content-box--text-{{ section.settings.content_align }} content-box--{{ section.settings.content_position }} text-container">
               {%- for block in section.blocks -%}
                 {%- case block.type -%}
                   {%- when '@app' -%}
@@ -218,6 +218,26 @@
       ],
       "default": "left",
       "label": "t:sections.all.content_align.label"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.all.content_align.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.all.content_align.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.all.content_align.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "Text Align"
     },
     {
       "type": "color",

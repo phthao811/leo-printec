@@ -36,7 +36,7 @@
             {% endif %}
               <div class="scroller">
                 <div class="scroller__inner">
-                    <ap-logolist reveal-on-scroll="" class="ap-logolist ap-logolist--carousel ap-object-loaded" style="opacity: 1;">
+                    <ap-logolist reveal-on-scroll="" class="ap-logolist ap-logolist--{{ section.settings.box_style }} ap-logolist--carousel ap-object-loaded" style="opacity: 1;">
                         <div class="ap-logolist__list">
                           {% for block in section.blocks %}
                             {% if block.settings.image != blank %}
@@ -70,6 +70,22 @@
   "tag": "section",
   "class": "shopify-section--ap-logolist",
   "settings": [
+    {
+      "type": "select",
+      "id": "box_style",
+      "options": [
+        {
+          "value": "border",
+          "label": "Border"
+        },
+        {
+          "value": "none",
+          "label": "None"
+        }
+      ],
+      "default": "none",
+      "label": "Box Style"
+    },
     {
       "type": "color",
       "id": "section_background",

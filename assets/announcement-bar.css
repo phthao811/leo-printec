@@ -34,8 +34,13 @@
     display: none;
   }
 }
-.container-fluid .announcement-row{
-  display: flex;
-    align-items: center;
-    justify-content: center;
+.ap-announcementbar__message--left{
+  text-align: left;
+}
+
+.ap-announcementbar__message--center{
+  text-align: center;
+}
+.ap-announcementbar__message--right{
+  text-align: right;
 }
