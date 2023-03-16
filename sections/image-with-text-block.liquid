@@ -31,7 +31,7 @@
     }
 {% endstyle %}
   
-  <section class="section img-width-text-section">
+<section class="section img-width-text-section {% if section.settings.layout == 'grid' %}container{% endif %}">
     <div>
       <ap-imagetextblock reveal-on-scroll="" class="ap-imagetextblock ap-imagetextblock--overlap-{{ section.settings.content_position }} ap-object-loaded">
         <div id="{{ section.id }}" class="ap-imagetextblock__image-wrapper">
@@ -158,6 +158,22 @@
       "type": "image_picker",
       "id": "image_mobile",
       "label": "t:sections.all.image_mobile.label"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "full",
+          "label": "Full"
+        },
+        {
+          "value": "grid",
+          "label": "Grid"
+        }
+      ],
+      "default": "full",
+      "label": "Layout"
     },
     {
       "type": "select",

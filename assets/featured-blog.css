@@ -37,7 +37,7 @@
   font-family: var(--g-font-other);
 }
 .features--image-zoom .image-zoom img {
-  height: 100%;
+  /* height: 100%; */
   object-fit: cover;
 }
 .article-type-2 .ap-listarticle__secondary-list {
@@ -102,4 +102,10 @@
   .article-item__category {
     display: none;
   }
+}
+.newsletter_input{
+  border: none;
+}
+.input_fieldv2{
+  border: 
 }

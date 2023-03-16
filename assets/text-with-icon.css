@@ -9,3 +9,9 @@
 .dots-nav__item {
   background-color: var(--text-color);
 }   
+.arrow-step:last-child{
+  display: none;
+}
+.arrow-step{
+  margin-top: 2rem;
+}

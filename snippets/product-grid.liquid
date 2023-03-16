@@ -131,9 +131,9 @@
     
         <div class="product-item__info  ">
             <div class="product-item-meta">
-                
-                {%- render 'product-ratting', product: product -%}
-                
+                {%- if section.settings.product_rating -%}
+                    {%- render 'product-ratting', product: product -%}
+                {%- endif -%}
                 <div class="type-product">{{ product.type }}</div>
             
                 <a href="{{ product.url }}" class="product-item-meta__title">{{ product.title }}</a>

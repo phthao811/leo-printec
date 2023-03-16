@@ -61,11 +61,11 @@
   margin-bottom: 10px;
   text-align: left;
 }
-.list-collections__item-info {
+/* .list-collections__item-info {
   top: unset;
   transform: unset;
   bottom: 0;
-}
+} */
 .collection-2 .section__header {
   margin-bottom: 45px;
 }
