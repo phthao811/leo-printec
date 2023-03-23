@@ -1,6 +1,6 @@
 <ap-listarticle stagger-apparition="" class="article-type-2 ap-listarticle ap-listarticle--section ap-listarticle--collage hd-pocket ap-object-loaded">
 
-    <div class="ap-listarticle__secondary-list">
+    <div class="ap-listarticle__secondary-list grid--{{ section.settings.columns_desktop }}-col-desktop{% if section.settings.collection == blank %}grid--2-col-tablet-down{% else %} grid--{{ section.settings.columns_mobile }}-col-tablet-down{% endif %}">
         {%- for article in section.settings.blog.articles limit: section.settings.post_limit -%}
         {% if forloop.index > 1 %}
         <div reveal="" class="article-item article-item--horizontal image-zoom">

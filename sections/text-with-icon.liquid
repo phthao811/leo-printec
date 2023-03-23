@@ -13,6 +13,17 @@
 <section class="section section--flush">
     <div class="section__color-wrapper">
         <div class="container vertical-breather">
+          <div class="content_textwithicon" style="text-align:center;">
+            {% if section.settings.caption != blank %}
+              <h2 class="heading heading--small }}">{{ section.settings.caption }}</h2>
+            {% endif %}
+            {% if section.settings.heading != blank %}
+              <h3 class="heading h{{ section.settings.heading_size_range }}" style="line-height:3rem">{{ section.settings.heading }}</h3>
+            {% endif %}
+            {% if section.settings.description != blank %}
+              <p class="">{{ section.settings.description }}</p>
+            {% endif %}
+          </div>
             <ap-carousel class="text-with-icons">
                 <div class="text-with-icons__list hide-scrollbar">
                     {% for block in section.blocks %}
@@ -68,6 +79,36 @@
       "default": "#F5A44A",
       "label": "t:sections.all.section_background.label"
     },
+    {
+          "type": "richtext",
+          "id": "caption",
+          "default": "<p>Talk about your brand</p>",
+          "label": "Caption"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            },
+            {
+              "value": "hxl",
+              "label": "t:sections.all.heading_size.options__4.label"
+            }
+          ],
+          "default": "h1",
+          "label": "Caption Size"
+        },
     {
       "type": "text",
       "id": "heading",

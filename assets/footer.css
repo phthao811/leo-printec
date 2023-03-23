@@ -53,3 +53,11 @@
     justify-content: center;
   }
 }
+
+.social-media__item a svg{
+  height: 13px;
+}
+
+.social-media{
+  gap:0.5rem;
+}

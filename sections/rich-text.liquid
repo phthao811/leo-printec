@@ -6,13 +6,13 @@
 
     --section-background: 245, 245, 245;
   }
-  .content-box--text-left {
+  .content-box--t-left {
     text-align: left;
   }
-  .content-box--text-center {
+  .content-box--t-center {
     text-align: center;
   }
-  .content-box--text-right {
+  .content-box--t-right {
     text-align: right;
   }
   h3.heading.h2:before {
@@ -31,9 +31,9 @@
     <div class="section__color-wrapper ">
       <div class="container vertical-breather">
         <div class="content-box content-box--center text-container
-        {% if section.settings.content_alignment == 'left' %}{{ 'content-box--text-left' | prepend: ' ' }}
-        {% elsif section.settings.content_alignment == 'center' %}{{ 'content-box--text-center' | prepend: ' ' }}
-        {% elsif section.settings.content_alignment == 'right' %}{{ 'content-box--text-right' | prepend: ' ' }}
+        {% if section.settings.content_alignment == 'left' %}{{ 'content-box--t-left' | prepend: ' ' }}
+        {% elsif section.settings.content_alignment == 'center' %}{{ 'content-box--t-center' | prepend: ' ' }}
+        {% elsif section.settings.content_alignment == 'right' %}{{ 'content-box--t-right' | prepend: ' ' }}
         {% endif %}
         ">
           {%- for block in section.blocks -%}

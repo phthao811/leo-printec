@@ -53,6 +53,7 @@
             "settings": {
               "text": "FREE Delivery Over $100 All Products",
               "text_size": "text--xxsmall",
+              "text-posision": "left",
               "view_more": "View more",
               "link_view": ""
             }
@@ -65,6 +66,7 @@
           "fullwidth": false,
           "enable_sticky": false,
           "show_btn": false,
+          "show_login": false,
           "content_sign": "Sign in",
           "heading_color": "#404040",
           "text_color": "#626262",
@@ -78,281 +80,76 @@
       "header": {
         "type": "header",
         "blocks": {
-          "efccab93-3832-4df1-97ab-7ad2ae8a3a25": {
+          "69fd03ae-b374-407e-ad44-e353d6959c53": {
+            "type": "child_menu_vertical",
+            "settings": {
+              "parent_menu": "Home",
+              "parent_megamenu": "menu-header",
+              "heading": "Home Layout",
+              "heading_size": "heading--nomal",
+              "menu_vertical": "home-layout"
+            }
+          },
+          "b80273de-e7c5-4efb-8565-a3369e621bd8": {
             "type": "child_menu",
             "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "heading": "PC Gaming",
+              "parent_menu": "Shop",
+              "parent_megamenu": "menu-header",
+              "heading": "Shop layout",
               "heading_size": "heading--small",
-              "menu": "pc-gaming"
+              "menu": "shop-layout"
             }
           },
-          "08e5910b-06a7-49c4-96b3-6f0315b88dcb": {
+          "aaca6d31-47d2-4c67-8f85-df4de42f276d": {
             "type": "child_menu",
             "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "heading": "PC Office",
+              "parent_menu": "Home",
+              "parent_megamenu": "menu-header",
+              "heading": "Home layout",
               "heading_size": "heading--small",
-              "menu": "pc-office"
-            }
-          },
-          "65da0eae-8d4e-4782-a819-4c3188f96d33": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "heading": "PC Streaming",
-              "heading_size": "heading--small",
-              "menu": "pc-streaming"
-            }
-          },
-          "fd0f059b-f293-47a6-9f91-d286d26cd95a": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "heading": "PC Workstation",
-              "heading_size": "heading--small",
-              "menu": "pc-workstation"
-            }
-          },
-          "f73c4bfe-9e95-4455-bbfd-fbe8bc90a926": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "heading": "Laptop",
-              "heading_size": "heading--small",
-              "menu": "laptop"
-            }
-          },
-          "b5716829-6db0-41b6-a8fc-9be9ff7b1a8c": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/h11_banner-3.jpg",
-              "heading": "Psu Power",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections\/memory"
-            }
-          },
-          "59ec335c-3e2c-4264-ba1f-954a64c2cb16": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Shop by Category",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/h11_banner-1_44112299-8d95-4be8-bcb8-e41755693b71.png",
-              "heading": "Headsets",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections\/headsets"
-            }
-          },
-          "4d1744fa-cee1-4ad2-ac8e-f6cfe8501508": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Collections",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/photo-1603481546238-487240415921_1.jpg",
-              "heading": "Pc Gaming",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections"
-            }
-          },
-          "b5330703-5d6b-49c8-8be3-1de34e35eac2": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Collections",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/photo-1598550476439-6847785fcea6.jpg",
-              "heading": "PC Streaming",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections"
-            }
-          },
-          "d9c8d442-3e01-4a94-a130-d1266ca3c5ab": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Collections",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/photo-1563019589-7e7db5152430.jpg",
-              "heading": "PC Workstation",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections"
-            }
-          },
-          "18decb70-8bb2-491c-9a87-490533924f79": {
-            "type": "image_block",
-            "disabled": true,
-            "settings": {
-              "parent_menu": "Collections",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/photo-1577375774296-1480089cb555.jpg",
-              "heading": "PC Office",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections\/esports-game-shirt-1"
-            }
-          },
-          "14ce9eca-74e6-4afe-9f16-ee652a3a727c": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Collections",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/photo-1496181133206-80ce9b88a853.jpg",
-              "heading": "Laptop",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections"
-            }
-          },
-          "ee50adb4-6cb2-4660-9e74-7baddd52c45a": {
-            "type": "image_block",
-            "settings": {
-              "parent_menu": "Collections",
-              "parent_megamenu": "main-menu",
-              "image": "shopify:\/\/shop_images\/soccer-player-holding-ball-looking-out.jpg",
-              "heading": "Fashion Gamer",
-              "heading_size": "heading--xxsmall",
-              "description": "",
-              "link": "shopify:\/\/collections\/esports-game-shirt-1"
-            }
-          },
-          "2dc18577-fe46-4a20-bc40-c4555ecfcc9b": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "Mainboard",
-              "heading_size": "heading--small",
-              "menu": "mainboard"
-            }
-          },
-          "b4001664-bf41-4cc1-9b1a-52844d2a9c71": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "CPU",
-              "heading_size": "heading--small",
-              "menu": "cpu"
-            }
-          },
-          "8266618e-11b4-482f-be33-2c9e8c863abb": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "VGA - Video Card",
-              "heading_size": "heading--small",
-              "menu": "vga-video-card"
-            }
-          },
-          "2597692a-5316-4550-8b45-32706595dd39": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "RAM - Internal Memory",
-              "heading_size": "heading--small",
-              "menu": "ram-internal-memory"
-            }
-          },
-          "da9c4bd2-ba73-4895-a0d8-ad55a324f498": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "HDD - SSD",
-              "heading_size": "heading--small",
-              "menu": "hdd-ssd"
-            }
-          },
-          "49a7e0a9-c3fd-420e-91e3-c2bb7e599c3a": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "PSU - Computer Power",
-              "heading_size": "heading--small",
-              "menu": "psu-computer-power"
-            }
-          },
-          "45877a56-9204-4ff7-9aad-41af197030e1": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "COOLING",
-              "heading_size": "heading--small",
-              "menu": "cooling"
-            }
-          },
-          "7d940b47-bfa0-4b8d-a0b4-4d4dfc608c5b": {
-            "type": "child_menu",
-            "settings": {
-              "parent_menu": "Shop by Device",
-              "parent_megamenu": "main-menu",
-              "heading": "Case - Computer Case",
-              "heading_size": "heading--small",
-              "menu": "case-computer-case"
+              "menu": "home-layout"
             }
           }
         },
         "block_order": [
-          "efccab93-3832-4df1-97ab-7ad2ae8a3a25",
-          "08e5910b-06a7-49c4-96b3-6f0315b88dcb",
-          "65da0eae-8d4e-4782-a819-4c3188f96d33",
-          "fd0f059b-f293-47a6-9f91-d286d26cd95a",
-          "f73c4bfe-9e95-4455-bbfd-fbe8bc90a926",
-          "b5716829-6db0-41b6-a8fc-9be9ff7b1a8c",
-          "59ec335c-3e2c-4264-ba1f-954a64c2cb16",
-          "4d1744fa-cee1-4ad2-ac8e-f6cfe8501508",
-          "b5330703-5d6b-49c8-8be3-1de34e35eac2",
-          "d9c8d442-3e01-4a94-a130-d1266ca3c5ab",
-          "18decb70-8bb2-491c-9a87-490533924f79",
-          "14ce9eca-74e6-4afe-9f16-ee652a3a727c",
-          "ee50adb4-6cb2-4660-9e74-7baddd52c45a",
-          "2dc18577-fe46-4a20-bc40-c4555ecfcc9b",
-          "b4001664-bf41-4cc1-9b1a-52844d2a9c71",
-          "8266618e-11b4-482f-be33-2c9e8c863abb",
-          "2597692a-5316-4550-8b45-32706595dd39",
-          "da9c4bd2-ba73-4895-a0d8-ad55a324f498",
-          "49a7e0a9-c3fd-420e-91e3-c2bb7e599c3a",
-          "45877a56-9204-4ff7-9aad-41af197030e1",
-          "7d940b47-bfa0-4b8d-a0b4-4d4dfc608c5b"
+          "69fd03ae-b374-407e-ad44-e353d6959c53",
+          "b80273de-e7c5-4efb-8565-a3369e621bd8",
+          "aaca6d31-47d2-4c67-8f85-df4de42f276d"
         ],
         "settings": {
           "header_type": "header-2",
           "sticky_header": true,
           "enable_vetical": false,
           "transparent_header": false,
+          "enable_promotion": true,
+          "icon": "fire_color",
+          "promotion": "Extra <span>Sale 30%<\/span> off",
           "loading_bar_background": "#ffffff",
           "header_background": "#ffffff",
-          "bg_header_bottom": "#282828",
+          "bg_header_bottom": "#ffffff",
           "header_text_color": "#000000",
-          "color_menu": "#ffffff",
+          "color_menu": "#282828",
           "color_menu_hover": "#f5a44a",
           "header_border_color": "#ffffff",
           "reduce_header_padding": "0",
-          "logo": "shopify:\/\/shop_images\/HiShop_1_1.png",
           "logo_width": 130,
-          "menu": "main-menu",
+          "menu": "menu-header",
           "menu_vertical": "",
           "enable_localization": true,
           "country_code": "",
           "enable_search": true,
           "enable_search_box": true,
           "search_placeholder": "",
-          "enable_login": true,
-          "enable_login_icon": true
+          "info_contact": true,
+          "heading_hotline": "Call us: 084 555-0120",
+          "desc_hotline": "Talk to an expert",
+          "show_login": true,
+          "enable_login_icon": false,
+          "content_sign": "Sign in",
+          "show_wishlist": true,
+          "enable_wishlist_icon": false,
+          "content_wishlist": "Wishlist",
+          "enable_cart_icon": false
         }
       },
       "footer": {
@@ -361,32 +158,32 @@
           "1b16488a-34bb-47c6-9724-9deda920d9a1": {
             "type": "footer_item",
             "settings": {
-              "bottom_logo": "shopify:\/\/shop_images\/HiShop_1_white.png",
+              "bottom_logo": "shopify:\/\/shop_images\/Logo.png",
               "bottom_logo_width": 125,
               "heading": "",
               "heading_size": "heading--small",
               "menu": "",
-              "content": "<p>All-in-one HtShop Theme is a specific, clean, minimal and ultimate theme.<\/p>",
-              "content_2": "<p>(1800) <a href=\"tel:(1800) 88-66-991\" title=\"tel:(1800) 88-66-991\">88-66-991<\/a><\/p>",
-              "content_3": "<p>947 Clare Point, Western Sahara, Los Angeles<\/p><p><a href=\"https:\/\/leo-ftshop-2.myshopify.com\" title=\"https:\/\/leo-ftshop-2.myshopify.com\">demo@demo.com<\/a><\/p>",
+              "content": "<p>Distrusts delighted Excuse few the remain highly feebly add people manner say. It high at my mind by roof.<\/p>",
+              "content_2": "",
+              "content_3": "",
               "social_heading": "",
-              "social_facebook": "",
-              "social_instagram": "",
-              "social_pinterest": "",
+              "social_facebook": "facebook",
+              "social_instagram": "g",
+              "social_pinterest": "g",
               "social_youtube": "",
-              "social_linkedin": ""
+              "social_linkedin": "f"
             }
           },
           "f451f2aa-aca0-4cb7-9181-3751b08d6451": {
             "type": "footer_item",
             "settings": {
               "bottom_logo_width": 125,
-              "heading": "PRODUCTS",
-              "heading_size": "heading--xxsmall",
-              "menu": "products",
-              "content": "",
+              "heading": "Get in Touch",
+              "heading_size": "heading--xsmall",
+              "menu": "",
+              "content": "<p>2972 Westheimer Rd. Santa Ana, Illinois 85486<\/p>",
               "content_2": "",
-              "content_3": "",
+              "content_3": "<p>support@example.com <br\/><strong>+ (406) 555-0120<\/strong><\/p>",
               "social_heading": "",
               "social_facebook": "",
               "social_instagram": "",
@@ -399,9 +196,9 @@
             "type": "footer_item",
             "settings": {
               "bottom_logo_width": 125,
-              "heading": "SERVICES",
+              "heading": "Infomation",
               "heading_size": "heading--xxsmall",
-              "menu": "services",
+              "menu": "infomation",
               "content": "",
               "content_2": "",
               "content_3": "",
@@ -417,18 +214,35 @@
             "type": "footer_item",
             "settings": {
               "bottom_logo_width": 125,
-              "heading": "ACCEPT PAYMENTS",
+              "heading": "Useful links",
               "heading_size": "heading--small",
-              "menu": "",
+              "menu": "useful-links",
               "content": "",
               "content_2": "",
               "content_3": "",
-              "image": "shopify:\/\/shop_images\/payment.png",
-              "social_heading": "FOLLOW US",
-              "social_facebook": "#",
-              "social_instagram": "#",
-              "social_pinterest": "#",
-              "social_youtube": "#",
+              "social_heading": "",
+              "social_facebook": "",
+              "social_instagram": "",
+              "social_pinterest": "",
+              "social_youtube": "",
+              "social_linkedin": ""
+            }
+          },
+          "67a5eabc-94b9-4e48-ad6d-dcb26a9c2abc": {
+            "type": "footer_item",
+            "settings": {
+              "bottom_logo_width": 125,
+              "heading": "About Us",
+              "heading_size": "heading--xsmall",
+              "menu": "about-us",
+              "content": "",
+              "content_2": "",
+              "content_3": "",
+              "social_heading": "",
+              "social_facebook": "",
+              "social_instagram": "",
+              "social_pinterest": "",
+              "social_youtube": "",
               "social_linkedin": ""
             }
           }
@@ -437,13 +251,14 @@
           "1b16488a-34bb-47c6-9724-9deda920d9a1",
           "f451f2aa-aca0-4cb7-9181-3751b08d6451",
           "3aa9984d-0866-435a-9341-f87f88a35464",
-          "d0c0dcbd-db2f-4686-8042-96324a31a2cf"
+          "d0c0dcbd-db2f-4686-8042-96324a31a2cf",
+          "67a5eabc-94b9-4e48-ad6d-dcb26a9c2abc"
         ],
         "settings": {
-          "background": "#202020",
-          "heading_color": "#ffffff",
-          "text_color": "#939393",
-          "text_link": "#ffffff",
+          "background": "#f5f7fa",
+          "heading_color": "#282828",
+          "text_color": "#282828",
+          "text_link": "#282828",
           "border_color": "#ebebeb"
         }
       },
@@ -456,15 +271,23 @@
               "label": "",
               "content": "<p>Copyright © 2023 <a href=\"https:\/\/ap-leotheme.myshopify.com\/\" title=\"https:\/\/ap-leotheme.myshopify.com\/\"> HtShop<\/a>. All Rights <\/p>"
             }
+          },
+          "a4f13523-b4c5-4a7f-b4d2-b3be269addf6": {
+            "type": "payment_methods",
+            "settings": {
+              "label": "",
+              "payment_methods_image": "shopify:\/\/shop_images\/Bitmap_1.png"
+            }
           }
         },
         "block_order": [
-          "e9a0e818-8ee1-44ff-91fd-5986d97eff5c"
+          "e9a0e818-8ee1-44ff-91fd-5986d97eff5c",
+          "a4f13523-b4c5-4a7f-b4d2-b3be269addf6"
         ],
         "settings": {
-          "background": "#202020",
-          "heading_color": "#ffffff",
-          "text_color": "#ffffff",
+          "background": "#f5f7fa",
+          "heading_color": "#282828",
+          "text_color": "#282828",
           "border_color": "#484848"
         }
       },
@@ -541,6 +364,11 @@
           "text_color": "#ffffff",
           "prev_next_button_background": "#ffffff",
           "prev_next_button_color": "#282828"
+        }
+      },
+      "loadmoreproduct": {
+        "type": "loadmoreproduct",
+        "settings": {
         }
       }
     },

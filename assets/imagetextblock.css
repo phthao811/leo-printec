@@ -5,9 +5,10 @@
   background-color: transparent;
 }
 .ap-imagetextblock__content .heading.heading--large {
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 58px;
-  text-shadow: 2px 0px 3px #000000;
+  font-weight: 600;
+  /* text-shadow: 2px 0px 3px #000000; */
   margin: 0 0 5px 0;
   font-family: var(--text-font-family);
 }
@@ -124,4 +125,18 @@
 }
 section.section.img-width-text-section.container{
   margin: 0 auto;
+}
+.button_icon{
+  display: inline-flex;
+  align-items: center;
+  gap:0.5rem;
+}
+.button_icon:hover .button-withicon{
+  transform: rotate(0deg);
+  transition: all ease-in-out 0.3s;
+}
+.button-withicon{
+    width: 14px;
+    display: block;
+    transform: rotate(-45deg);
 }

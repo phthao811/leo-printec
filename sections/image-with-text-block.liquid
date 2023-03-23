@@ -52,7 +52,7 @@
             {% endif %}
         </div>
         <div class="container container--flush">
-            <div reveal="" class="ap-imagetextblock__content content-box content-box_t--{{ section.settings.text_align }} content-box--{{ section.settings.content_size }} content-box--text-{{ section.settings.content_align }} content-box--{{ section.settings.content_position }} text-container">
+            <div reveal="" class="ap-imagetextblock__content content-box content-box_text--{{ section.settings.text_align }} content-box--{{ section.settings.content_size }} content-box--text-{{ section.settings.content_align }} content-box--{{ section.settings.content_position }} text-container">
               {%- for block in section.blocks -%}
                 {%- case block.type -%}
                   {%- when '@app' -%}
@@ -81,8 +81,12 @@
                       {{ block.settings.text }}
                     
                     {%- when 'button_readmore' -%}
-                      <div class="button-wrapper">
-                        <a href="{{ block.settings.link }}" class="button button--primary">{{ block.settings.read_more }}</a>
+                      <div class="button-wrapper ">
+                        <a href="{{ block.settings.link }}" class="button button--primary button_icon">{{ block.settings.read_more }}
+                          {%- if block.settings.icon_button -%}
+                          <span class="button-withicon">{%- render 'icon-arrow' -%}</span>
+                          {%- endif-%}
+                        </a>
                       </div>
                     
                     {%- when 'email_form' -%}
@@ -383,6 +387,12 @@
           "id": "read_more",
           "label": "t:sections.all.read_more.label",
           "default": "Read more"
+        },
+        {
+          "type": "checkbox",
+          "id": "icon_button",
+          "label":"Enable icon",
+          "default": false
         },
         {
           "type": "url",

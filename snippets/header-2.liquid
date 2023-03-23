@@ -195,6 +195,14 @@
             </div>
             {% endif %}
             {% render 'header-menu', _class: "header__bottom-navigation hd-pocket hd-lap" %}
+            {% if section.settings.enable_promotion %}
+            <div class="info_promotion">
+                {% render 'icon-accordion', icon: section.settings.icon %}
+                <h3 class="h4 text_promotion">
+                {{ section.settings.promotion }}
+                </h3>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
