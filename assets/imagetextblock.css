@@ -11,6 +11,8 @@
   /* text-shadow: 2px 0px 3px #000000; */
   margin: 0 0 5px 0;
   font-family: var(--text-font-family);
+  margin-top: 24px;
+  letter-spacing: 0;
 }
 .ap-imagetextblock__content .heading.h5 {
   margin: 0 0 30px 0;
@@ -139,4 +141,19 @@ section.section.img-width-text-section.container{
     width: 14px;
     display: block;
     transform: rotate(-45deg);
+}
+@media (min-width: 991px) {
+.container .ap-imagetextblock .ap-imagetextblock__image-wrapper{
+  border-radius: 40px;
+}
+}
+.button_inline{
+  border: 1px solid white;
+  background: transparent;
+  text-shadow: none;
+    margin-top: 40px;
+    /* text-transform: capitalize; */
+    font-size: 14px;
+    font-family: var(--g-font-other);
+    line-height: 54px;
 }

@@ -9,6 +9,11 @@
 .dots-nav__item {
   background-color: var(--text-color);
 }   
+@media (max-width: 989px){
+  .arrow-step{
+    display: none;
+  }
+}
 .arrow-step:last-child{
   display: none;
 }
@@ -20,3 +25,13 @@
     padding-bottom: 4rem;
   }
 }
+.content_textwithicon .heading span{
+      background-image: var(--gradient-base-accent-2);
+      background-size: 100% 7px;
+      background-position: 0 bottom;
+      background-repeat: repeat-x;
+      border-radius: 3px;
+    }
+    .title-icon{
+      text-transform: none;
+    }

@@ -19,10 +19,11 @@
     grid-auto-columns: 250px;
   }
 }
-
-.ap-logolist--none .ap-logolist__list{
-  grid-template-columns: repeat(6, auto); 
-  gap: 5rem;
+@media (min-width: 768px){
+  .ap-logolist--none .ap-logolist__list{
+    grid-template-columns: repeat(6, auto); 
+    gap: 5rem;
+  }
 }
 .ap-logolist--none{
   border: none;

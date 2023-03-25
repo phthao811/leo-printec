@@ -1,7 +1,7 @@
 
 <ap-imagetextblock reveal-on-scroll="" class="ap-imagetextblock ap-imagetextblock--small ap-imagetextblock--cover ap-object-loaded" style="justify-content:center; min-height: auto">
     {% if section.settings.image_background != blank %}
-    <div class="ap-imagetextblock__image-wrapper {% if section.settings.layout == 'grid' %}container{% endif %} imagetextblock_container">
+    <div class="ap-imagetextblock__image-wrapper {% if section.settings.layout == 'grid' %}container newsletter{% endif %} imagetextblock_container">
       <img class="ap-imagetextblock__image" reveal="" loading="lazy" 
         sizes="(max-width: 999px) 100vw, 72vw" alt="" 
         src="{{ section.settings.image_background | image_url: width: section.settings.image_background.width }}" 
@@ -19,7 +19,7 @@
     </div>
     {% endif %}
     <div class="container container--flush">
-      <div reveal="" class="newsletter-content ap-imagetextblock__content content-box  text-container imagetextblock_background">
+  <div reveal="" class="newsletter-content ap-imagetextblock__content content-box  text-container {% if section.settings.layout == 'grid' %}imagetextblock_background{% endif %}">
             {%- if section.settings.heading != blank -%}
                 <h2 class="heading heading--small" {{ block.shopify_attributes }}>{{ section.settings.heading }}</h2>
             {%- endif-%}
@@ -42,7 +42,7 @@
                           <div class="input-row">
                             <div class="input">
                               <input type="email" id="newsletter[{{ section.id }}][contact][email]" name="contact[email]" class="input__field" required="">
-                              <label for="newsletter[{{ section.id }}][contact][email]" class="input__label">{{ 'newsletter.label' | t }}</label>
+                              <label for="newsletter[{{ section.id }}][contact][email]" class="input__label" style="color:#A3A3A3">{{ 'newsletter.label' | t }}</label>
                             </div>
                           </div>
                           <div class="input">

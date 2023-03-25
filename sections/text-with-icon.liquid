@@ -5,17 +5,18 @@
         --heading-color: 40, 40, 40;
         --text-color: {{ section.settings.title_color }};
         --title-color: {{ section.settings.text_color }};
-        --vertical-breather: 40px; /* Inner spacing is smaller on this section */;
+        {% comment %} --vertical-breather: 40px; /* Inner spacing is smaller on this section */; {% endcomment %}
         background-color: {{ section.settings.section_background }};
         overflow: hidden;
-    }
+      --gradient-base-accent-2: {% if section.settings.gradient_accent_2 != blank %}{{ section.settings.gradient_accent_2 }}{% else %}{{ settings.colors_accent_2 }}{% endif %};
+    }    
 </style>
 <section class="section section--flush">
     <div class="section__color-wrapper">
         <div class="container vertical-breather">
           <div class="content_textwithicon" style="text-align:center;">
             {% if section.settings.caption != blank %}
-              <h2 class="heading heading--small }}">{{ section.settings.caption }}</h2>
+              <h2 class="heading heading--small" style="color: var(--primary);">{{ section.settings.caption }}</h2>
             {% endif %}
             {% if section.settings.heading != blank %}
               <h3 class="heading h{{ section.settings.heading_size_range }}" style="line-height:3rem">{{ section.settings.heading }}</h3>
@@ -121,6 +122,11 @@
       "default": "#282828",
       "label": "t:sections.all.heading_color.label"
     },
+    {
+        "id": "gradient_accent_2",
+        "type": "color_background",
+        "label": "Gradient color"
+      },
     {
       "type": "range",
       "id": "heading_size_range",

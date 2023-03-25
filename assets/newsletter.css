@@ -13,7 +13,7 @@
   font-size: 24px;
   text-transform: uppercase;
   line-height: 36px;
-  font-weight: 400;
+  font-weight: 700;
 }
 .newsletter h2.heading.heading--small span {
   color: var(--primary);
@@ -37,7 +37,7 @@
 .wp-newsletter-input {
   display: flex;
   align-items: center;
-  padding: 8px;
+  padding: 8px 0;
   gap: 0.5rem;
   /* border: 1px solid #d7d7d7; */
 }
@@ -71,11 +71,11 @@
     padding: 0 15px;
   }
 }
-@media (min-width: 990px){
+
   button.button.button--primary.button_form{
     padding: 1.3rem 1.5rem!important;
   }
-}
+
 
 .button_form:hover .button-withicon{
   transform: rotate(0deg);

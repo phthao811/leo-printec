@@ -85,4 +85,9 @@
     }
   }
 }
+  .article-item:hover .button-withicon{
+    transform: rotate(0deg)!important;
+    transition: all ease-in-out .3s;
+  }
+
 

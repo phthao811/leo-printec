@@ -8,6 +8,7 @@
   border: 1px solid;
   background-color: #f5f5f5;
   border-color: rgb(var(--border-color));
+  border-radius: 40px;
 }
 .predictive-search__form {
   position: relative;
@@ -97,12 +98,13 @@
 .header__linklist-link {
   padding: 14px 0;
   font-family: var(--g-font-other);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: flex;
-  text-transform: uppercase;
   align-items: center;
+
+
+
   flex-direction: row-reverse;
-  align-items: flex-start;
 }
 .header__bottom-navigation .header__linklist {
   justify-content: start;
@@ -115,16 +117,17 @@
   color: var(--primary);
 }
 .has-dropdown .header__linklist-link:before {
-  content: "\2304";
+  content: "∟";
   font-family: "Font Awesome 5 Pro";
   font-style: normal;
   color: #A3A3A3;
   /* font-weight: 900; */
-  font-size: 16px;
+  font-size: 10px;
   display: inline-block;
   margin-left: 5px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   line-height: 0.5;
+  transform: rotate(-45deg);
 }
 .header__linklist-link.menu-item--active {
   color: var(--primary);
@@ -343,11 +346,20 @@
     padding: 0;
   }
 }
+@media (max-width: 999px){
+  .header__hotline-image{
+    display: none!important;
+  }
+  .info_promotion{
+    display: none!important;
+  }
+}
 .header__hotline-image{
   order: 2;
   display: flex;
   width: 25%;
   justify-content: center;
+  gap: 1rem;
 }
 .header__hotline-image p{
   margin: 0

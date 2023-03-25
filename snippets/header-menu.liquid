@@ -37,7 +37,7 @@
         {% if is_megamenu == true %}
         <a class="header__linklist-link link--animated {% if link.current %}menu-item--active{% endif %}"
           href="{{ link.url }}" {% if aria_controls != '' %}ap-controlsaria="{{ aria_controls }}" {%
-          endif %} ap-expanded-aria="false">{{ link.title | escape }}</a>
+          endif %} ap-expanded-aria="false">{{ link.title | escape }} </a>
         {% if aria_controls != '' %}
         <div id="{{ aria_controls }}" class="mega-menu" hidden="">
           <div class="container">

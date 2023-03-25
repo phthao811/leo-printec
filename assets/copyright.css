@@ -1,5 +1,6 @@
 .copyright-item-content a {
-  color: #fff;
+  color: var(--primary);
+  text-decoration: none!important;
 }
 .copyright__aside {
   justify-content: center;
@@ -15,6 +16,11 @@
     justify-content: center;
   }
   .copyright-item-1 {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 989px) {
+  .copyright__aside{
     text-align: center;
   }
 }

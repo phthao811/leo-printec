@@ -18,3 +18,8 @@
   border: none;
   
 }
+@media (min-width:992px){
+  .heading_product-desc{
+    margin-top: 24px;
+  }
+}

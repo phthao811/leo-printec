@@ -82,11 +82,11 @@
                     
                     {%- when 'button_readmore' -%}
                       <div class="button-wrapper ">
-                        <a href="{{ block.settings.link }}" class="button button--primary button_icon">{{ block.settings.read_more }}
-                          {%- if block.settings.icon_button -%}
-                          <span class="button-withicon">{%- render 'icon-arrow' -%}</span>
-                          {%- endif-%}
-                        </a>
+                          <a href="{{ block.settings.link }}" class="button {% if section.settings.button_inline %} button_inline{% else %} button--primary{% endif %} button_icon">{{ block.settings.read_more }}
+                            {%- if block.settings.icon_button -%}
+                            <span class="button-withicon">{%- render 'icon-arrow' -%}</span>
+                            {%- endif-%}
+                          </a>
                       </div>
                     
                     {%- when 'email_form' -%}
@@ -288,6 +288,12 @@
       "id": "button_text_color",
       "default": "#405DE6",
       "label": "t:sections.all.button_text_color.label"
+    },
+    {
+      "type": "checkbox",
+      "id":"button_inline",
+      "default": false,
+      "label": "Enable button"
     },
     {
       "type": "header",

@@ -1,15 +1,19 @@
 {{ 'featured-blog.css' | asset_url | stylesheet_tag }}
 
 <style>
+  #shopify-section-{{ section.id }}{
+  --gradient-base-accent-2: {% if section.settings.gradient_accent_2 != blank %}{{ section.settings.gradient_accent_2 }}{% else %}{{ settings.colors_accent_2 }}{% endif %};
+  }
   #shopify-section-template--14993172955344__16152178472dac1ead {--heading-color: 40, 40, 40;
     --heading-color: {{ section.settings.heading_color | color_extract: 'red' }}, {{ section.settings.heading_color | color_extract: 'green' }}, {{ section.settings.heading_color | color_extract: 'blue' }};
     --text-color: {{ section.settings.text_color | color_extract: 'red' }}, {{ section.settings.text_color | color_extract: 'green' }}, {{ section.settings.text_color | color_extract: 'blue' }};
     --section-background: {{ section.settings.section_background | color_extract: 'red' }}, {{ section.settings.section_background | color_extract: 'green' }}, {{ section.settings.section_background | color_extract: 'blue' }};
     --section-articles-count: {{ section.settings.columns_desktop }};
+    
   }
   .blog-date ,
   .blog-author {
-    color: {{ section.settings.color_info }};
+    {% comment %} color: {{ section.settings.color_info }}; {% endcomment %}
     position: relative;
   }
   .article-item-description {
@@ -28,15 +32,15 @@
     <div class="blog-template">
       <div class="container">
         {% if section.settings.heading != blank %}
-          <header class="section__header ">
-            <div class="text-container">
-              <h3 class="heading h{{ section.settings.heading_size_range }}">{{ section.settings.heading }}</h3>
-            </div>
+          <header class="section__header">
             {% if section.settings.description %}
-              <div class="heading-description {{ section.settings.description_size }}">
+              <div class="heading-description article-item-description {{ section.settings.description_size }}">
                 {{ section.settings.description }}
               </div>
             {% endif %}
+            <div class="text-container content_textwithicon">
+              <h3 class="heading h{{ section.settings.heading_size_range }}" style="line-height: 3rem;">{{ section.settings.heading }}</h3>
+            </div>
           </header>
         {% endif %}
         <div class="scroller">
@@ -151,6 +155,11 @@
       "label": "t:sections.all.color_btn_hover.label"
     },
     {
+        "id": "gradient_accent_2",
+        "type": "color_background",
+        "label": "Gradient color"
+      },
+    {
       "type": "text",
       "id": "heading",
       "default": "Blog posts",
@@ -168,7 +177,7 @@
     {
       "type": "textarea",
       "id": "description",
-      "label": "t:sections.all.description.label"
+      "label": "Caption"
     },
     {
       "type": "select",
@@ -238,6 +247,12 @@
       "id": "show_tag",
       "default": true,
       "label": "t:sections.all.show_tag.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_desc",
+      "default": false,
+      "label": "Show Description"
     },
     {
       "type": "text",

@@ -13,7 +13,7 @@
     --text-color: {{ section.settings.text_color | color_extract: 'red' }}, {{ section.settings.text_color | color_extract: 'green' }}, {{ section.settings.text_color | color_extract: 'blue' }};
     --primary-button-background: {{ section.settings.button_background | color_extract: 'red' }}, {{ section.settings.button_background | color_extract: 'green' }}, {{ section.settings.button_background | color_extract: 'blue' }};
     --primary-button-text-color: {{ section.settings.button_text_color | color_extract: 'red' }}, {{ section.settings.button_text_color | color_extract: 'green' }}, {{ section.settings.button_text_color | color_extract: 'blue' }};
-    --section-background: {{ section.settings.background | color_extract: 'red' }}, {{ section.settings.background | color_extract: 'green' }}, {{ section.settings.background | color_extract: 'blue' }};
+    {% comment %} --section-background: {{ section.settings.background | color_extract: 'red' }}, {{ section.settings.background | color_extract: 'green' }}, {{ section.settings.background | color_extract: 'blue' }}; {% endcomment %}
     z-index: {{ section.settings.z_index }};
     position: relative;
     top: {{ section.settings.top }};
@@ -27,7 +27,7 @@
   }
 </style>
 <section>
-    <ap-announcementbar auto-play="" cycle-speed="5" class="ap-announcementbar ap-announcementbar--multiple">
+    <ap-announcementbar auto-play="" cycle-speed="5" class="ap-announcementbar ap-announcementbar--multiple" style="background:{{ section.settings.background }}">
 
     <div class="{%- if section.settings.fullwidth -%}container-fluid{%- else -%}container{%- endif -%}">
       {% if section.settings.show_btn %}
@@ -154,7 +154,7 @@
       "type": "color",
       "id": "background",
       "label": "t:sections.ap-announcementbar.settings.background.label",
-      "default": "#F5F5F5"
+      "default": "#DAF1F6"
     },
     {
       "type": "text",
